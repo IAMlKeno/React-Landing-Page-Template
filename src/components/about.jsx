@@ -12,7 +12,7 @@ export const About = (props) => {
           <div className="col-xs-12 col-md-6">
             <div className="about-text">
               <h2>About</h2>
-              {props.data ? props.data.paragraphs.map((p) => <p>{p}</p>) : "loading..."}
+              {props.data ? props.data.paragraphs.map((p, idx) => <p key={idx}>{p}</p>) : "loading..."}
 
             </div>
             <a data-toggle="collapse" href="#signup-form-container" className="btn btn-custom btn-lg page-scroll">
