@@ -21,8 +21,6 @@ export const Contact = (props) => {
     e.preventDefault();
     console.log(name, email, message);
 
-    {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
-
     emailjs
       .sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, e.target, process.env.REACT_APP_EMAILJS_USER_ID)
       .then(
@@ -122,7 +120,7 @@ export const Contact = (props) => {
                 <span>
                   <i className="fa fa-envelope-o"></i> Email
                 </span>{" "}
-                {props.data ? <a href="mailto:${props.data.email}">{props.data.email}</a> : "loading"}
+                {props.data ? <a href={"mailto:" + props.data.email}>{props.data.email}</a> : "loading"}
               </p>
             </div>
           </div>
