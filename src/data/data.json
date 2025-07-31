@@ -1,70 +1,41 @@
 {
+  "Navigation": {
+    "logoText": "Squat with Confidence"
+  },
   "Header": {
-    "title": "We are a Landing Page",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+    "title": "Squat with Confidence",
+    "paragraph": "We're not strong because we have to be. We're strong because we choose to be."
   },
   "About": {
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "paragraph": "\"We're not strong because we have to be. We're strong because we choose to be.\"",
+    "paragraphs": [
+      "Squat with Confidence was born out of a love for the squat—and a love for what it represents: strength, resilience, and confidence built from the ground up.",
+      "Inspired by Sorinex’s Squatober, this bootcamp is more than just a workout. It’s a challenge—a month-long journey of squatting every weekday to grow powerful glutes, bulletproof your mindset, and test your limits.",
+      "Why Squat? 🍑 Build a bigger, stronger caboose; 💪 Develop quads that’ll make your ex jealous; 🧠 Gain mental toughness, discipline, and focus; 🫀 Improve longevity, mobility, and confidence",
+      "Whether you’re new to barbell training or ready to refine your technique, this experience is for anyone who wants to feel strong—not just look it.",
+      "\"We're not strong because we have to be. We're strong because we choose to be.\""
+    ],
     "Why": [
-      "Lorem ipsum dolor",
-      "Tempor incididunt",
-      "Lorem ipsum dolor",
-      "Incididunt ut labore"
+      "Community",
+      "Growth encouragement"
     ],
     "Why2": [
-      "Aliquip ex ea commodo",
-      "Lorem ipsum dolor",
-      "Exercitation ullamco",
-      "Lorem ipsum dolor"
+      "Fellowship",
+      "Fun"
     ]
   },
-  "Gallery": [
+  "Gallery": {
+    "feature": {
+      "title": "Squat With Confidence",
+      "subtitle": "Learn to squat dude..."
+    },
+    "sections": [
     {
       "title": "Project Title",
       "largeImage": "img/portfolio/01-large.jpg",
       "smallImage": "img/portfolio/01-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/02-large.jpg",
-      "smallImage": "img/portfolio/02-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/03-large.jpg",
-      "smallImage": "img/portfolio/03-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/04-large.jpg",
-      "smallImage": "img/portfolio/04-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/05-large.jpg",
-      "smallImage": "img/portfolio/05-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/06-large.jpg",
-      "smallImage": "img/portfolio/06-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/07-large.jpg",
-      "smallImage": "img/portfolio/07-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/08-large.jpg",
-      "smallImage": "img/portfolio/08-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/09-large.jpg",
-      "smallImage": "img/portfolio/09-small.jpg"
     }
-  ],
+  ]},
   "Services": [
     {
       "icon": "fa fa-wordpress",
@@ -152,33 +123,33 @@
     }
   ],
   "Contact": {
-    "address": "4321 California St, San Francisco, CA 12345 ",
-    "phone": "+1 123 456 1234",
-    "email": "info@company.com",
+    "address": "17 Heatherway Drive",
+    "phone": "+1 902 394 7518",
+    "email": "elkenojones@gmail.com",
     "facebook": "fb.com",
     "twitter": "twitter.com",
     "youtube": "youtube.com"
   },
   "Features": [
     {
-      "icon": "fa fa-comments-o",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-check-square",
+      "title": "Confidence",
+      "text": "Let's build courage, control, and confidence under the bar — one rep at a time"
     },
     {
-      "icon": "fa fa-bullhorn",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-shield",
+      "title": "Injury Prevention",
+      "text": "Injuries suck. Let's help avoid them by fortifying our body with stability and mobility drills. As well as how to stay safe when there's hundreds of pounds on your back."
+    },
+    {
+      "icon": "fa fa-comments-o",
+      "title": "Training Personalization & Check-ins",
+      "text": "Periodic check-ins on form and general wellness. In person coaching to receieve personalized modifications to the program to better suit your needs."
     },
     {
       "icon": "fa fa-group",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
-    },
-    {
-      "icon": "fa fa-magic",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "Community",
+      "text": "Can't we all just get along, share a laugh, share a protein shake and joke about who lifted more today. Join a community where we hold each other accountable and congradulate each other on our wins"
     }
   ]
 }

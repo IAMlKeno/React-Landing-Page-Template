@@ -208,7 +208,7 @@ a:focus,
   display: table;
   width: 100%;
   padding: 0;
-  background: url(../img/intro-bg.jpg) center center no-repeat;
+  background: url(../img/m-squat-confidence.jpg) center center no-repeat;
   background-color: #e5e5e5;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -220,7 +220,7 @@ a:focus,
 }
 .intro h1 {
   font-family: "Raleway", sans-serif;
-  color: #fff;
+  color: #5ca9fb;
   font-size: 82px;
   font-weight: 700;
   text-transform: uppercase;
@@ -234,7 +234,7 @@ a:focus,
 .intro p {
   color: #fff;
   font-size: 22px;
-  font-weight: 300;
+  font-weight: 700;
   line-height: 30px;
   margin: 0 auto;
   margin-bottom: 60px;
@@ -558,6 +558,14 @@ label {
 }
 #contact .contact-item i.fa {
   margin-right: 10px;
+}
+#contact .contact-item.email a {
+  text-decoration-line: underline;
+  color: #fff;
+}
+#contact .contact-item.email a:hover {
+  font-weight: 700;
+  color: #fff;
 }
 #contact .social {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
