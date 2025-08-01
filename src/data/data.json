@@ -126,9 +126,17 @@
     "address": "17 Heatherway Drive",
     "phone": "+1 902 394 7518",
     "email": "elkenojones@gmail.com",
-    "facebook": "fb.com",
+    "facebook": "https://www.facebook.com/share/19XyQQ2BZn/",
+    "instagram": "https://www.instagram.com/squatwithconfidence?igsh=M2cwanZkcnA3eDVx",
     "twitter": "twitter.com",
-    "youtube": "youtube.com"
+    "youtube": "youtube.com",
+    "socialmedia": [
+      {
+        "name": "facebook",
+        "mediaLink": "https://www.facebook.com/share/19XyQQ2BZn/",
+        "iconClass": "fa fa-youtube"
+      }
+    ]
   },
   "Features": [
     {

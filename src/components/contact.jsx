@@ -16,7 +16,6 @@ export const Contact = (props) => {
   };
   const clearState = () => setState({ ...initialState });
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(name, email, message);
@@ -34,6 +33,7 @@ export const Contact = (props) => {
         }
       );
   };
+
   return (
     <div>
       <div id="contact">
@@ -124,23 +124,19 @@ export const Contact = (props) => {
               </p>
             </div>
           </div>
+
           <div className="col-md-12">
             <div className="row">
               <div className="social">
                 <ul>
                   <li>
-                    <a href={props.data ? props.data.facebook : "/"}>
+                    <a href={props.data ? props.data.facebook : "/"} target="blank">
                       <i className="fa fa-facebook"></i>
                     </a>
                   </li>
                   <li>
-                    <a href={props.data ? props.data.twitter : "/"}>
-                      <i className="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.youtube : "/"}>
-                      <i className="fa fa-youtube"></i>
+                    <a href={props.data ? props.data.instagram : ""} target="blank">
+                      <i className="fa fa-instagram"></i>
                     </a>
                   </li>
                 </ul>
