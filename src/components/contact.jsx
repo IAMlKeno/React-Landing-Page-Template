@@ -24,7 +24,7 @@ export const Contact = (props) => {
       .sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, e.target, process.env.REACT_APP_EMAILJS_USER_ID)
       .then(
         (result) => {
-          console.log(result.text);
+          // console.log(result.text);
           alert('Inquiry sent successfully');
           clearState();
         },
