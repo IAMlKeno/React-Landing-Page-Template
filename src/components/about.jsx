@@ -16,6 +16,7 @@ export const About = (props) => {
               {props.data ? props.data.paragraphs.map((p, idx) => <p key={idx}>{p}</p>) : "loading..."}
 
             </div>
+            <h3><a href="https://www.instagram.com/sorinex_squatober/?hl=en">Check out Sorinex's page</a></h3>
             <a data-toggle="collapse" href="#signup-form-container" className="btn btn-custom btn-lg page-scroll">
               Sign Up Now!
             </a>{" "}
