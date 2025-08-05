@@ -19,8 +19,8 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
           </button>
           <a className="navbar-brand page-scroll" href="#page-top">
-            <span class="logo-desktop" title={ props.data?.logoText }>{ props.data?.logoText }</span>
-            <span class="logo-mobile" title={ props.data?.logoText }>{ props.data?.logoTextMobile }</span>
+            <span className="logo-desktop" title={ props.data?.logoText }>{ props.data?.logoText }</span>
+            <span className="logo-mobile" title={ props.data?.logoText }>{ props.data?.logoTextMobile }</span>
           </a>{" "}
         </div>
 
