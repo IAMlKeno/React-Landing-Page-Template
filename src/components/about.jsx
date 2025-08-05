@@ -1,4 +1,5 @@
 import React from "react";
+import ejsquat from '../assets/ejsquat.jpg'
 
 export const About = (props) => {
   return (
@@ -7,7 +8,7 @@ export const About = (props) => {
         <div className="row">
           <div className="col-xs-12 col-md-6">
             {" "}
-            <img src="img/Elkeno_jones-squat.jpg" className="img-responsive" alt="" />{" "}
+            <img src={ejsquat} className="img-responsive" alt="" />{" "}
           </div>
           <div className="col-xs-12 col-md-6">
             <div className="about-text">

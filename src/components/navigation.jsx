@@ -19,7 +19,8 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
           </button>
           <a className="navbar-brand page-scroll" href="#page-top">
-            { props.data?.logoText ?? "React Landing Page" }
+            <span class="logo-desktop" title={ props.data?.logoText }>{ props.data?.logoText }</span>
+            <span class="logo-mobile" title={ props.data?.logoText }>{ props.data?.logoTextMobile }</span>
           </a>{" "}
         </div>
 
@@ -36,6 +37,11 @@ export const Navigation = (props) => {
             <li>
               <a href="#signup" className="page-scroll">
                 Sign Up!
+              </a>
+            </li>
+            <li>
+              <a href="#team" className="page-scroll">
+                Meet the Team
               </a>
             </li>
             <li>

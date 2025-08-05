@@ -11,3 +11,72 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.logo-mobile {
+  display: none;
+}
+.logo-desktop {
+  display: block;
+}
+
+#team .links .icons {
+  font-size: x-large;
+}
+
+@media screen and (min-width: 375px) and (max-width: 667px) {
+/* @media screen and (min-width: 667px and max-width: 667px) { */
+  body {
+    width: 105% !important;
+  }
+  .logo-mobile {
+    display: block;
+  }
+  .logo-desktop {
+    display: none;
+  }
+  #menu {
+    width: 91%;
+  }
+  .intro h1 {
+    font-size: 50px;
+  }
+  #signup {
+    width: 111%
+  }
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  #about, #features {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 414px) and (max-width: 896px) {
+  body {
+    width: 100%;
+  }
+  .logo-mobile {
+    display: block;
+  }
+  .logo-desktop {
+    display: none;
+  }
+  #menu {
+    width: 91%;
+  }
+  .intro h1 {
+    font-size: 60px;
+  }
+
+  #signup {
+    width: 111%
+  }
+  .intro {
+    background: unset;
+  }
+}
