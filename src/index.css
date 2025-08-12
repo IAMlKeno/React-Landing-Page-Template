@@ -24,7 +24,23 @@ code {
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+  body {
+    width: 100vw !important;
+  }
+  .intro h1 {
+    font-size: 58px;
+  }
+  .logo-mobile {
+    display: block;
+  }
+  .logo-desktop {
+    display: none;
+  }
+  .intro {
+    background: unset;
+  }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -45,7 +61,7 @@ code {
 @media screen and (min-width: 375px) and (max-width: 667px) {
 /* @media screen and (min-width: 667px and max-width: 667px) { */
   body {
-    width: 105% !important;
+    width: 100vw !important;
   }
   .logo-mobile {
     display: block;
@@ -53,14 +69,8 @@ code {
   .logo-desktop {
     display: none;
   }
-  #menu {
-    width: 91%;
-  }
   .intro h1 {
     font-size: 50px;
-  }
-  #signup {
-    width: 111%
   }
   .row {
     margin-left: 0;
@@ -72,30 +82,5 @@ code {
   }
   #about, #features {
     max-width: 100%;
-  }
-}
-
-@media screen and (min-width: 414px) and (max-width: 896px) {
-  body {
-    width: 100%;
-  }
-  .logo-mobile {
-    display: block;
-  }
-  .logo-desktop {
-    display: none;
-  }
-  #menu {
-    width: 91%;
-  }
-  .intro h1 {
-    font-size: 60px;
-  }
-
-  #signup {
-    width: 111%
-  }
-  .intro {
-    background: unset;
   }
 }
