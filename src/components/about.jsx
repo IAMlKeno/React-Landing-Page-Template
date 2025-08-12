@@ -2,6 +2,12 @@ import React from "react";
 import ejsquat from '../assets/ejsquat.jpg'
 
 export const About = (props) => {
+  const scrollAndCollapse = () => {
+    const thing = document.querySelector('a[href="#signup-form-container"]');
+    thing.click();
+    thing.scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <div id="about">
       <div className="container">
@@ -16,10 +22,10 @@ export const About = (props) => {
               {props.data ? props.data.paragraphs.map((p, idx) => <p key={idx}>{p}</p>) : "loading..."}
 
             </div>
-            <h3><a href="https://www.instagram.com/sorinex_squatober/?hl=en">Check out Sorinex's page</a></h3>
-            <a data-toggle="collapse" href="#signup-form-container" className="btn btn-custom btn-lg page-scroll">
+            <h3><a href="https://www.instagram.com/sorinex_squatober/?hl=en" target="blank">Check out Sorinex's page</a></h3>
+            <button className="btn btn-custom btn-lg page-scroll" onClick={scrollAndCollapse}>
               Sign Up Now!
-            </a>{" "}
+            </button>{" "}
           </div>
         </div>
       </div>
