@@ -1,40 +1,49 @@
-import { useState } from "react";
-import emailjs from "emailjs-com";
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import type { ContactData } from "../types";
 
-const initialState = {
-  name: "",
-  email: "",
-  message: "",
-};
-export const Contact = (props) => {
-  const [{ name, email, message }, setState] = useState(initialState);
+interface Props {
+  data?: ContactData;
+}
 
-  const handleChange = (e) => {
+interface FormState {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const initialState: FormState = { name: "", email: "", message: "" };
+
+export const Contact = ({ data }: Props) => {
+  const [{ name, email, message }, setState] = useState<FormState>(initialState);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setState((prevState) => ({ ...prevState, [name]: value }));
   };
+
   const clearState = () => setState({ ...initialState });
-  
-  
-  const handleSubmit = (e) => {
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(name, email, message);
-    
-    {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
-    
+
+    /* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
+      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.currentTarget, {
+        publicKey: "YOUR_PUBLIC_KEY",
+      })
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
+          console.log("SUCCESS!");
           clearState();
         },
         (error) => {
-          console.log(error.text);
+          console.log("FAILED...", error);
         }
       );
   };
+
   return (
     <div>
       <div id="contact">
@@ -48,7 +57,7 @@ export const Contact = (props) => {
                   get back to you as soon as possible.
                 </p>
               </div>
-              <form name="sentMessage" validate onSubmit={handleSubmit}>
+              <form name="sentMessage" onSubmit={handleSubmit}>
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group">
@@ -84,7 +93,7 @@ export const Contact = (props) => {
                     name="message"
                     id="message"
                     className="form-control"
-                    rows="4"
+                    rows={4}
                     placeholder="Message"
                     required
                     onChange={handleChange}
@@ -105,7 +114,7 @@ export const Contact = (props) => {
                 <span>
                   <i className="fa fa-map-marker"></i> Address
                 </span>
-                {props.data ? props.data.address : "loading"}
+                {data ? data.address : "loading"}
               </p>
             </div>
             <div className="contact-item">
@@ -113,7 +122,7 @@ export const Contact = (props) => {
                 <span>
                   <i className="fa fa-phone"></i> Phone
                 </span>{" "}
-                {props.data ? props.data.phone : "loading"}
+                {data ? data.phone : "loading"}
               </p>
             </div>
             <div className="contact-item">
@@ -121,7 +130,7 @@ export const Contact = (props) => {
                 <span>
                   <i className="fa fa-envelope-o"></i> Email
                 </span>{" "}
-                {props.data ? props.data.email : "loading"}
+                {data ? data.email : "loading"}
               </p>
             </div>
           </div>
@@ -130,17 +139,17 @@ export const Contact = (props) => {
               <div className="social">
                 <ul>
                   <li>
-                    <a href={props.data ? props.data.facebook : "/"}>
+                    <a href={data ? data.facebook : "/"}>
                       <i className="fa fa-facebook"></i>
                     </a>
                   </li>
                   <li>
-                    <a href={props.data ? props.data.twitter : "/"}>
+                    <a href={data ? data.twitter : "/"}>
                       <i className="fa fa-twitter"></i>
                     </a>
                   </li>
                   <li>
-                    <a href={props.data ? props.data.youtube : "/"}>
+                    <a href={data ? data.youtube : "/"}>
                       <i className="fa fa-youtube"></i>
                     </a>
                   </li>

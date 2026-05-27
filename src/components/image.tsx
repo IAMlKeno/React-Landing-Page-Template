@@ -1,6 +1,7 @@
 import React from "react";
+import type { GalleryItem } from "../types";
 
-export const Image = ({ title, largeImage, smallImage }) => {
+export const Image = ({ title, largeImage, smallImage }: GalleryItem) => {
   return (
     <div className="portfolio-item">
       <div className="hover-bg">

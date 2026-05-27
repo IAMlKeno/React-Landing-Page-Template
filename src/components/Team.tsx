@@ -1,6 +1,11 @@
 import React from "react";
+import type { TeamMember } from "../types";
 
-export const Team = (props) => {
+interface Props {
+  data?: TeamMember[];
+}
+
+export const Team = ({ data }: Props) => {
   return (
     <div id="team" className="text-center">
       <div className="container">
@@ -12,8 +17,8 @@ export const Team = (props) => {
           </p>
         </div>
         <div id="row">
-          {props.data
-            ? props.data.map((d, i) => (
+          {data
+            ? data.map((d, i) => (
                 <div key={`${d.name}-${i}`} className="col-md-3 col-sm-6 team">
                   <div className="thumbnail">
                     {" "}

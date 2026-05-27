@@ -1,6 +1,11 @@
 import React from "react";
+import type { FeatureItem } from "../types";
 
-export const Features = (props) => {
+interface Props {
+  data?: FeatureItem[];
+}
+
+export const Features = ({ data }: Props) => {
   return (
     <div id="features" className="text-center">
       <div className="container">
@@ -8,8 +13,8 @@ export const Features = (props) => {
           <h2>Features</h2>
         </div>
         <div className="row">
-          {props.data
-            ? props.data.map((d, i) => (
+          {data
+            ? data.map((d, i) => (
                 <div key={`${d.title}-${i}`} className="col-xs-6 col-md-3">
                   {" "}
                   <i className={d.icon}></i>

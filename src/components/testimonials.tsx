@@ -1,6 +1,11 @@
 import React from "react";
+import type { TestimonialItem } from "../types";
 
-export const Testimonials = (props) => {
+interface Props {
+  data?: TestimonialItem[];
+}
+
+export const Testimonials = ({ data }: Props) => {
   return (
     <div id="testimonials">
       <div className="container">
@@ -8,8 +13,8 @@ export const Testimonials = (props) => {
           <h2>What our clients say</h2>
         </div>
         <div className="row">
-          {props.data
-            ? props.data.map((d, i) => (
+          {data
+            ? data.map((d, i) => (
                 <div key={`${d.name}-${i}`} className="col-md-4">
                   <div className="testimonial">
                     <div className="testimonial-image">

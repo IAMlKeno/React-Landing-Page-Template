@@ -1,6 +1,11 @@
 import React from "react";
+import type { ServiceItem } from "../types";
 
-export const Services = (props) => {
+interface Props {
+  data?: ServiceItem[];
+}
+
+export const Services = ({ data }: Props) => {
   return (
     <div id="services" className="text-center">
       <div className="container">
@@ -12,8 +17,8 @@ export const Services = (props) => {
           </p>
         </div>
         <div className="row">
-          {props.data
-            ? props.data.map((d, i) => (
+          {data
+            ? data.map((d, i) => (
                 <div key={`${d.name}-${i}`} className="col-md-4">
                   {" "}
                   <i className={d.icon}></i>

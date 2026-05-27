@@ -1,6 +1,11 @@
 import React from "react";
+import type { HeaderData } from "../types";
 
-export const Header = (props) => {
+interface Props {
+  data?: HeaderData;
+}
+
+export const Header = ({ data }: Props) => {
   return (
     <header id="header">
       <div className="intro">
@@ -9,14 +14,11 @@ export const Header = (props) => {
             <div className="row">
               <div className="col-md-8 col-md-offset-2 intro-text">
                 <h1>
-                  {props.data ? props.data.title : "Loading"}
+                  {data ? data.title : "Loading"}
                   <span></span>
                 </h1>
-                <p>{props.data ? props.data.paragraph : "Loading"}</p>
-                <a
-                  href="#features"
-                  className="btn btn-custom btn-lg page-scroll"
-                >
+                <p>{data ? data.paragraph : "Loading"}</p>
+                <a href="#features" className="btn btn-custom btn-lg page-scroll">
                   Learn More
                 </a>{" "}
               </div>
