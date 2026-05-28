@@ -20,7 +20,12 @@ export default function CartIcon() {
   return (
     <>
       <button onClick={handleClick} style={{display: "inline-block", border: "1px solid"}}>
-        <span><i className="fa fa-shopping-cart"></i></span><span className="items-cart-count">{cartCount}</span>
+        <span>
+          <i className="fa fa-shopping-cart"></i>
+        </span>
+        <span className="items-cart-count">
+          {cartCount}
+          </span>
       </button>
       <CartModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} children={cart} />
     </>

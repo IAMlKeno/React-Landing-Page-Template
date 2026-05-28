@@ -10,12 +10,11 @@ export const CartContext = createContext<CartContextType | undefined>(undefined)
 
 export const MyCartProvider = ({children}: {children: React.ReactNode}) => {
   const [products, setProducts] = useState<Product[]>(() => {
-    return [];
-    // const persistedCart = localStorage.getItem("shopping_cart");
-    // return persistedCart ? JSON.parse(persistedCart) : [];
+    const persistedCart = localStorage.getItem("shopping_cart");
+    return persistedCart ? JSON.parse(persistedCart) : [];
   });
 
-  // useEffect(() => localStorage.setItem('shopping_cart', JSON.stringify(products)), [products]);
+  useEffect(() => localStorage.setItem('shopping_cart', JSON.stringify(products)), [products]);
 
   return (
     <CartContext.Provider value={{ products, setProducts }}>

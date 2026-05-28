@@ -4,7 +4,7 @@ import { useClassCart } from "../context/CartClassProvider";
 
 export default function ProductList() {
   const [ productList ] = useState<Product[]>(getAllProducts());
-  const { dispatch } = useClassCart();
+  const { cart, dispatch } = useClassCart();
 
   const iconStyle = {
     fontSize: "38px",
@@ -24,6 +24,16 @@ export default function ProductList() {
     dispatch({ type: 'ADD_TO_CART', item });
   }
 
+  const handleRemoveFromCart = (evt: React.MouseEvent<HTMLButtonElement>, item: Product) => {
+    evt.preventDefault();
+    dispatch({ type: 'REMOVE_FROM_CART', item });
+  }
+
+  const countInCart = (product: Product): number => {
+    const v = cart.cartItems.find((item) => item.item.id == product.id);
+    return v ? v.quantity : 0;
+  }
+
   return (
     <>
       <div id="products" className="text-center section">
@@ -37,11 +47,21 @@ export default function ProductList() {
               productList.map((p: Product) => (
                 <div key={p.id} className="col-xs-6 col-md-3 product-name">
                   <i className={`fa fa-solid ${p.icon}`} style={iconStyle}></i>
-                  <div>{p.name} <small><em>({p.sku})</em></small></div>
                   <div>
-                    <button className="add-cart" onClick={(e) => handleAddToCart(e, p)}>
-                      Add to cart&nbsp;&nbsp;<i className="fa fa-add"></i>
-                    </button>
+                    {p.name} <small><em>({p.sku})</em></small>
+                  </div>
+                  <div>
+                    <div className="cart-actions-container" onClick={(e) => e.preventDefault()}>
+                      <button className="cart-actions remove-cart" onClick={(e) => handleRemoveFromCart(e, p)}>
+                        <i className="fa fa-minus"></i>
+                      </button>
+                      &nbsp;&nbsp;
+                      Add to cart ({countInCart(p)})
+                      &nbsp;&nbsp;
+                      <button className="cart-actions add-cart" onClick={(e) => handleAddToCart(e, p)}>
+                        <i className="fa fa-add"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
               ))

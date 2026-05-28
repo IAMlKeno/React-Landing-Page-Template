@@ -23,13 +23,13 @@ export default function CartModal(opts: ModalOpts) {
 
   const buildCartList = (): any => {
     return (
-      <ul>
+      <div className="cart-list">
         {opts.children.cartItems.map((child: CartItem, i) => (
-          <li key={child.item.id}>
-            {child.item.name}
-          </li>
+          <div key={child.item.id} className="cart-list-item">
+            <span>{child.item.name}</span> <span>({child.quantity})</span>
+          </div>
         ))}
-      </ul>
+      </div>
     )
   };
 
@@ -42,10 +42,13 @@ export default function CartModal(opts: ModalOpts) {
   return (
     <dialog ref={dialogRef} onCancel={handleCancel} className="modal-box">
       <div className="modal-content">
-        {opts.children.totalItems > 0
-          ? buildCartList()
-          : emptyCart
-        }
+        <div className="cart-list-container">
+          {opts.children.totalItems > 0
+            ? buildCartList()
+            : emptyCart
+          }
+        </div>
+        <hr />
         <button onClick={() => opts.onClose()}>Close</button>
       </div>
     </dialog>

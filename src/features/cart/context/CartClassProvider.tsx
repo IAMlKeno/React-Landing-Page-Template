@@ -4,7 +4,7 @@ import { Cart, ICart } from "../domain/Cart";
 import { Product } from "../domain/Product";
 
 interface CartClassContextType {
-  cart: ICart;
+  cart: Cart;
   dispatch: (action: ICartActions) => void;
 }
 

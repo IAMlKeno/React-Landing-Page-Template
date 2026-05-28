@@ -607,3 +607,17 @@ label {
 .modal-content {
   padding: 10px;
 }
+.cart-navigation {
+  display: flex;
+  align-items: center;
+}
+.cart-list-container {
+  margin-bottom: 5px;
+}
+.cart-list-item:nth-child(odd) {
+  background-color: lightblue;
+}
+.cart-list-item {
+  display: 'flex';
+  justify-content: 'space-between';
+}

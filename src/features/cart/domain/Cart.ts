@@ -56,7 +56,7 @@ export class Cart implements ICart {
       if (v.item.id == item.id) {
         v.quantity--;
       }
-        return v;
+      return v;
      });
 
     this.cartItems = theCart;
