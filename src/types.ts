@@ -3,6 +3,20 @@ export interface HeaderData {
   paragraph: string;
 }
 
+export interface NavigationItemsData {
+  href: string;
+  className: Array<string>;
+  label: string;
+}
+export interface NavigationLogo {
+  type: string;
+  value: string;
+}
+export interface NavigationData {
+  items: Array<NavigationItemsData>;
+  logo: NavigationLogo;
+}
+
 export interface AboutData {
   paragraph: string;
   Why: string[];

@@ -1,7 +1,22 @@
 {
   "Header": {
-    "title": "We are a Landing Page",
+    "title": "Simple Cart",
     "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+  },
+  "Navigation": {
+    "items": [
+      { "href": "#features", "className": ["page-scroll", "menu-item"], "label": "Features" },
+      { "href": "#about", "className": ["page-scroll"], "label": "About" },
+      { "href": "#services", "className": ["page-scroll"], "label": "Services" },
+      { "href": "#portfolio", "className": ["page-scroll"], "label": "Gallery" },
+      { "href": "#testimonials", "className": ["page-scroll"], "label": "Testimonials" },
+      { "href": "#team", "className": ["page-scroll"], "label": "Team" },
+      { "href": "#contact", "className": ["page-scroll"], "label": "Contact" }
+    ],
+    "logo": {
+      "type": "text",
+      "value": "Simple Cart"
+    }
   },
   "About": {
     "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -161,7 +176,7 @@
   },
   "Features": [
     {
-      "icon": "fa fa-comments-o",
+      "icon": "fa fa-comments",
       "title": "Lorem ipsum",
       "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
     },
@@ -171,7 +186,7 @@
       "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
     },
     {
-      "icon": "fa fa-group",
+      "icon": "fa fa-people-group",
       "title": "Lorem ipsum",
       "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
     },
@@ -179,6 +194,40 @@
       "icon": "fa fa-magic",
       "title": "Lorem ipsum",
       "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    }
+  ],
+  "Products": [
+    {
+      "id": "1",
+      "name": "Basketball - NBA Allstars 2026",
+      "sku": "111",
+      "description": "NBA Allstars 2026 basketball. Black and white",
+      "icon": "fa-basketball",
+      "price": 25
+    },
+    {
+      "id": "2",
+      "name": "Baseball - NBA",
+      "sku": "112",
+      "description": "Baseball - NBA",
+      "icon": "fa-baseball",
+      "price": 30
+    },
+    {
+      "id": "3",
+      "name": "Football - NFL League Ball",
+      "sku": "113",
+      "description": "NFL League Ball",
+      "icon": "fa-football",
+      "price": 40
+    },
+    {
+      "id": "4",
+      "name": "Softball",
+      "sku": "114",
+      "description": "Larger ball for softball.",
+      "icon": "fa-baseball",
+      "price": 20
     }
   ]
 }

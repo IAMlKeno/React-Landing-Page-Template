@@ -8,11 +8,41 @@
   #testimonials,
   #team,
   #contact,
-  #footer {
+  #footer,
+  .section {
     width: 111%;
   }
 
   #portfolio {
     width: 110%;
   }
+}
+
+.basketball-icon {
+  width: 100px;
+  height: 100px;
+  background-color: #f26522; /* Classic basketball orange */
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #000;
+  box-shadow: inset -10px -10px 15px rgba(0,0,0,0.2); /* Gives 3D depth */
+}
+.basketball-icon::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #000;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.basketball-icon::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  background: #000;
+  left: 50%;
+  transform: translateX(-50%);
 }
