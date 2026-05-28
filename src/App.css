@@ -1,3 +1,14 @@
+.navbar-header .cart-icon-wrapper {
+  float: right;
+  margin-top: 1.5vh;
+  margin-right: 5px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
 @media screen and (max-width: 400px) {
   #features {
     padding: 20px;

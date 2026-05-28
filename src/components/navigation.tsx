@@ -9,6 +9,9 @@ export const Navigation = () => {
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
         <div className="navbar-header">
+          <span className="cart-icon-wrapper visible-xs-inline-block">
+            <CartIcon />
+          </span>
           <button
             type="button"
             className="navbar-toggle collapsed"
@@ -35,7 +38,7 @@ export const Navigation = () => {
         >
           <ul className="nav navbar-nav navbar-right">
             {data &&
-              data.items.map((item: NavigationItemsData, idx: number) => (
+              data.items.map((item: NavigationItemsData) => (
                 <li key={item.href}>
                   <a href={item.href} className={item.className.join(' ')} >
                     {item.label}
@@ -43,8 +46,7 @@ export const Navigation = () => {
                 </li>
               ))
             }
-
-            <li><CartIcon /></li>
+            <li className="hidden-xs"><CartIcon /></li>
           </ul>
         </div>
       </div>
