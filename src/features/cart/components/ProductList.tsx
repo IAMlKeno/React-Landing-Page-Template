@@ -47,8 +47,11 @@ export default function ProductList() {
               productList.map((p: Product) => (
                 <div key={p.id} className="col-xs-6 col-md-3 product-name">
                   <i className={`fa fa-solid ${p.icon}`} style={iconStyle}></i>
-                  <div>
+                  <h3>
                     {p.name} <small><em>({p.sku})</em></small>
+                  </h3>
+                  <div className="product-description">
+                    {p.description}
                   </div>
                   <div>
                     <div className="cart-actions-container" onClick={(e) => e.preventDefault()}>

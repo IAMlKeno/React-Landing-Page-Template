@@ -3,7 +3,7 @@ import CartModal from "./CartModal";
 import { useClassCart } from "../context/CartClassProvider";
 
 export default function CartIcon() {
-  const { cart } = useClassCart();
+  const { cart, dispatch } = useClassCart();
   const [ isModalOpen, setIsModalOpen ] = useState<boolean>(false);
   const [ cartCount, setCartCount ] = useState<number>(0);
 
@@ -17,6 +17,8 @@ export default function CartIcon() {
     setIsModalOpen(true);
   }
 
+  const handleEmptyCart = () => dispatch({ type: 'EMPTY_CART' });
+
   return (
     <>
       <button onClick={handleClick} style={{display: "inline-block", border: "1px solid"}}>
@@ -27,7 +29,7 @@ export default function CartIcon() {
           {cartCount}
           </span>
       </button>
-      <CartModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} children={cart} />
+      <CartModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} children={cart} onEmptyCart={handleEmptyCart} />
     </>
   );
 }

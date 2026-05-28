@@ -9,8 +9,8 @@ interface CartClassContextType {
 }
 
 interface ICartActions {
-  type: string;
-  item: Product;
+  type: 'ADD_TO_CART' | 'REMOVE_FROM_CART' | 'EMPTY_CART';
+  item?: Product;
 }
 
 export const CartClassContext = createContext<CartClassContextType | undefined>(undefined);
@@ -25,6 +25,10 @@ const cartReducer = (state: Cart, action: ICartActions) => {
       break;
     case 'REMOVE_FROM_CART':
       newCart.removeFromCart(action.item);
+      returnValue = { ...newCart };
+      break;
+    case 'EMPTY_CART':
+      newCart.purgeCart();
       returnValue = { ...newCart };
       break;
     default:

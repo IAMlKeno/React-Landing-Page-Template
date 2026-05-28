@@ -64,6 +64,12 @@ export class Cart implements ICart {
     return this;
   }
 
+  purgeCart(): Cart {
+    this.cartItems = this.cartItems.filter((i) => !i);
+    this.updateCart();
+    return this;
+  }
+
   private updateCart() {
     this.purgeEmptyItems();
     this.updateCost();

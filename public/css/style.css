@@ -607,6 +607,9 @@ label {
 .modal-content {
   padding: 10px;
 }
+.fa-cart-shopping, .fa-shopping-cart {
+  font: normal normal normal 20px / 1 FontAwesome;
+}
 .cart-navigation {
   display: flex;
   align-items: center;
@@ -617,7 +620,21 @@ label {
 .cart-list-item:nth-child(odd) {
   background-color: lightblue;
 }
+.cart-list-item span:nth-child(1) {
+  margin-right: 5px;
+}
 .cart-list-item {
-  display: 'flex';
-  justify-content: 'space-between';
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-name {
+    border: 1px solid;
+}
+.product-name h3 {
+    min-height: 7.5vh;
+}
+.product-description {
+  min-height: 7.5vh;
+  border: 1px solid blue;
 }
