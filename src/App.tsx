@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Navigation } from "./components/navigation";
 import { Header } from "./components/header";
 import { Features } from "./components/features";
@@ -13,6 +13,7 @@ import SmoothScroll from "smooth-scroll";
 import type { LandingPageData } from "./types";
 import "./App.css";
 import ProductList from "./features/cart/components/ProductList";
+import { form, FormProgressTest } from "./components/FormProgressTest";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -29,6 +30,7 @@ const App = () => {
     <div>
       <Navigation />
       <Header data={landingPageData?.Header} />
+      <FormProgressTest props={form} />
       <ProductList />
       <Features data={landingPageData?.Features} />
       <About data={landingPageData?.About} />

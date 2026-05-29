@@ -1,6 +1,6 @@
 
-import React, { createContext, useContext, useEffect, useReducer, useState } from "react";
-import { Cart, ICart } from "../domain/Cart";
+import React, { createContext, useContext, useReducer } from "react";
+import { Cart } from "../domain/Cart";
 import { Product } from "../domain/Product";
 
 interface CartClassContextType {
