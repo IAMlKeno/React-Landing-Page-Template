@@ -30,7 +30,16 @@ const App = () => {
     <div>
       <Navigation />
       <Header data={landingPageData?.Header} />
-      <FormProgressTest props={form} />
+      <div id="form-test" className="text-center">
+        <div className="container">
+          <div className="col-md-10 col-md-offset-1 section-title">
+            <h2>Progression Form Test</h2>
+          </div>
+          <div style={{ display: 'flex', width: "100%", border: "1px solid blue" }}>
+            <FormProgressTest props={form} />
+          </div>
+        </div>
+      </div>
       <ProductList />
       <Features data={landingPageData?.Features} />
       <About data={landingPageData?.About} />

@@ -24,9 +24,9 @@ interface IFormState {
 
 export const form: IForm = {
   inputs: [
-    { type: "input", label: "Full name", max: 120, name: "name", placeholder: "John Doe", value: '', minLength: 3 },
-    { type: "input", label: "Age", max: 3, name: "age", step: 1, subtype: "number", value: '', min: 18 },
-    { type: "input", label: "Favorite Cartoon", max: 255, name: "fav_cartoon", value: '', placeholder: 'Attack on Titan', minLength: 3 },
+    { type: "input", label: "Full name", name: "name", placeholder: "John Doe", value: '', minLength: 3, maxLength: 120 },
+    { type: "input", label: "Age", name: "age", step: 1, subtype: "number", value: '', min: 18, max: 120 },
+    { type: "input", label: "Favorite Cartoon", name: "fav_cartoon", value: '', placeholder: 'Attack on Titan', minLength: 3, maxLength: 255 },
   ]
 }
 
@@ -48,10 +48,11 @@ export const FormProgressTest = ({ props }) => {
       name={input.name}
       value={ formState && formState.fields[input.name] ? formState.fields[input.name].value : input.defaultValue }
       { ...(input.placeholder && { placeholder: input.placeholder }) }
-      { ...(input.max && { max: input.max }) }
-      { ...(input.step && { step: input.step }) }
       { ...(input.minLength && { minLength: input.minLength }) }
+      { ...(input.maxLength && { maxLength: input.maxLength }) }
+      { ...(input.step && { step: input.step }) }
       { ...(input.min && { min: input.min }) }
+      { ...(input.max && { max: input.max }) }
       onChange={updateFormState} />
   )
 
@@ -96,19 +97,28 @@ export const FormProgressTest = ({ props }) => {
     }
   }
 
+  const handleSubmit = (e: React.SubmitEvent) => {
+    e.preventDefault();
+    alert('form submitted dude!');
+  }
+
   return (
     <>
       {props &&
         <div className="my-form" style={{margin: 'auto'}}>
-          <form>
+          <form onSubmit={handleSubmit}>
             {props.inputs.map((input: IInput, i: number) => (
-              <div className="form-control" key={input.name[i]}>
-                <label htmlFor={input.name}>{input.label}</label>
+              <div className="form-control" key={input.name[i]} style={{ justifyContent: "space-between", display: "flex" }}>
+                <label htmlFor={input.name} style={{ marginRight: "20px" }}>
+                  {input.label}
+                </label>
                 { buildInput(input) }
               </div>
             ))}
-
+            <br />
+            <input type="submit" className="btn btn-success" disabled={ progress !== 100 }/>
           </form>
+          <hr />
           <div className="form-progress" style={{border: "2px solid black", backgroundColor: 'lightgray', height: "15px"}}>
             <div ref={formRef} className="progress-fillin" style={{height: "100%", backgroundColor: "green", width: `${progress}%`}}></div>
           </div>
