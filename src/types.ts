@@ -58,12 +58,17 @@ export interface ContactData {
   address: string;
   phone: string;
   email: string;
-  facebook: string;
-  twitter: string;
-  youtube: string;
+  social?: {
+    links: SocialLinks[]
+  }
+}
+export interface SocialLinks {
+  link: string;
+  icon: string;
 }
 
 export interface LandingPageData {
+  SEO?: any;
   Header: HeaderData;
   About: AboutData;
   Features: FeatureItem[];

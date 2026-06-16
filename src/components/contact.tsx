@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import type { ContactData } from "../types";
+import type { ContactData, SocialLinks } from "../types";
 
 interface Props {
   data?: ContactData;
@@ -24,9 +24,9 @@ export const Contact = ({ data }: Props) => {
 
   const clearState = () => setState({ ...initialState });
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(name, email, message);
+    // console.log(name, email, message);
 
     /* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */
     emailjs
@@ -135,37 +135,28 @@ export const Contact = ({ data }: Props) => {
             </div>
           </div>
           <div className="col-md-12">
-            <div className="row">
-              <div className="social">
-                <ul>
-                  <li>
-                    <a href={data ? data.facebook : "/"}>
-                      <i className="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={data ? data.twitter : "/"}>
-                      <i className="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={data ? data.youtube : "/"}>
-                      <i className="fa fa-youtube"></i>
-                    </a>
-                  </li>
-                </ul>
+            {data?.social &&
+              <div className="row">
+                <div className="social">
+                  <ul>
+                    {data.social.links.map((social: SocialLinks, idx: number) => (
+                    <li key={social.link + '_' + idx} >
+                      <a href={social.link}>
+                        <i className={'fa fab ' + social.icon}></i>
+                      </a>
+                    </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
+            }
           </div>
         </div>
       </div>
       <div id="footer">
         <div className="container text-center">
           <p>
-            &copy; 2023 Issaaf Kattan React Land Page Template. Design by{" "}
-            <a href="http://www.templatewire.com" rel="nofollow">
-              TemplateWire
-            </a>
+            &copy; 2025 Design by {"Avanti Insieme"}
           </p>
         </div>
       </div>
