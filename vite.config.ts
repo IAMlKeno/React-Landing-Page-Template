@@ -1,14 +1,19 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
   plugins: [
     react(),
-    tsconfigPaths() // Automatically hooks into your tsconfig paths/aliases
+    tsconfigPaths()
   ],
   server: {
-    port: 3000,   // Retain the default CRA port
-    open: true,   // Automatically open the app on launch
-  }
+    port: 3000,
+    open: true,
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: ['./src/test/setup.ts'],
+  },
 });

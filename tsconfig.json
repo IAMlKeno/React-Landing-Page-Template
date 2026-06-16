@@ -7,7 +7,7 @@
     "jsx": "react-jsx",
     "strict": false,
     "skipLibCheck": true,
-    "types": ["vite/client"],
+    "types": ["vite/client", "vitest/globals"],
     "rootDir": "./src",
     "outDir": "./dist"
   },
