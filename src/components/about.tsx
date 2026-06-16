@@ -18,22 +18,20 @@ export const About = ({ data }: Props) => {
             <div className="about-text">
               <h2>About Us</h2>
               <p>{data ? data.paragraph : "loading..."}</p>
-              <h3>Why Choose Us?</h3>
+              <h3>{data?.whyHeader ?? "Why Choose Us?"}</h3>
               <div className="list-style">
-                <div className="col-lg-6 col-sm-6 col-xs-12">
-                  <ul>
-                    {data
-                      ? data.Why.map((d, i) => <li key={`${d}-${i}`}>{d}</li>)
-                      : "loading"}
-                  </ul>
-                </div>
-                <div className="col-lg-6 col-sm-6 col-xs-12">
-                  <ul>
-                    {data
-                      ? data.Why2.map((d, i) => <li key={`${d}-${i}`}> {d}</li>)
-                      : "loading"}
-                  </ul>
-                </div>
+                
+                {data?.listOfWhys.length &&
+                  data?.listOfWhys.map((whys, i) => (
+                    <div key={`div_${whys}_${i}`} className="col-lg-6 col-sm-6 col-xs-12">
+                      <ul key={`ul_${whys}_${i}`}>
+                        {whys.map((why, i) => (
+                          <li key={`${why}_${i}`}>{why}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))
+                }
               </div>
             </div>
           </div>

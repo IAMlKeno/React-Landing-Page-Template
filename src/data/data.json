@@ -9,32 +9,27 @@
   },
   "Navigation": {
     "items": [
-      { "href": "#features", "className": ["page-scroll", "menu-item"], "label": "Features" },
+      { "href": "#products", "className": ["page-scroll", "menu-item"], "label": "Products" },
       { "href": "#about", "className": ["page-scroll"], "label": "About" },
-      { "href": "#services", "className": ["page-scroll"], "label": "Services" },
-      { "href": "#portfolio", "className": ["page-scroll"], "label": "Gallery" },
-      { "href": "#testimonials", "className": ["page-scroll"], "label": "Testimonials" },
-      { "href": "#team", "className": ["page-scroll"], "label": "Team" },
       { "href": "#contact", "className": ["page-scroll"], "label": "Contact" }
     ],
     "logo": {
       "type": "text",
-      "value": "Simple Cart"
+      "value": "Revā by Hair Haven"
     }
   },
   "About": {
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Why": [
-      "Lorem ipsum dolor",
-      "Tempor incididunt",
-      "Lorem ipsum dolor",
-      "Incididunt ut labore"
-    ],
-    "Why2": [
-      "Aliquip ex ea commodo",
-      "Lorem ipsum dolor",
-      "Exercitation ullamco",
-      "Lorem ipsum dolor"
+    "paragraph": "Revā is the best hair care product",
+    "whyHeader": "Why Choose Revā?",
+    "listOfWhys": [
+      [
+        "Designed specifically for textured hair & protective styles",
+        "Hydration-first (most oils skip this step)"
+      ],
+      [
+        "Lightweight → no buildup, no clogged follicles",
+        "Focused on scalp health, not just hair growth hype"
+      ]
     ]
   },
   "Gallery": [
@@ -212,35 +207,17 @@
   "Products": [
     {
       "id": "1",
-      "name": "Basketball - NBA Allstars 2026",
+      "name": "Revā by Hair Haven",
       "sku": "111",
-      "description": "NBA Allstars 2026 basketball. Black and white",
-      "icon": "fa-basketball",
-      "price": 25
-    },
-    {
-      "id": "2",
-      "name": "Baseball - NBA",
-      "sku": "112",
-      "description": "Baseball - NBA",
-      "icon": "fa-baseball",
-      "price": 30
-    },
-    {
-      "id": "3",
-      "name": "Football - NFL League Ball",
-      "sku": "113",
-      "description": "NFL League Ball",
-      "icon": "fa-football",
-      "price": 40
-    },
-    {
-      "id": "4",
-      "name": "Softball",
-      "sku": "114",
-      "description": "Larger ball for softball.",
-      "icon": "fa-baseball",
-      "price": 20
+      "description": "Locks in moisture, nourishes scalp, and protects edges & parts",
+      "icon": "fa-bottle-droplet",
+      "price": 25,
+      "image": {
+        "src": "../img/reva/product_img.webp",
+        "alt": "Reva product image",
+        "height": "250",
+        "width": "250"
+      }
     }
   ]
 }

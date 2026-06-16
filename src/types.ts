@@ -20,8 +20,8 @@ export interface NavigationData {
 
 export interface AboutData {
   paragraph: string;
-  Why: string[];
-  Why2: string[];
+  whyHeader?: string;
+  listOfWhys?: Array<string[]>;
 }
 
 export interface FeatureItem {

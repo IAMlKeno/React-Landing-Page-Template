@@ -3,7 +3,8 @@ import { getAllProducts, Product } from "../domain/Product";
 import { useClassCart } from "../context/CartClassProvider";
 
 export default function ProductList() {
-  const [ productList ] = useState<Product[]>(getAllProducts());
+  const [showSku, setShowSku] = useState<boolean>(false);
+  const [productList] = useState<Product[]>(getAllProducts());
   const { cart, dispatch } = useClassCart();
 
   const iconStyle = {
@@ -46,9 +47,12 @@ export default function ProductList() {
             {productList &&
               productList.map((p: Product) => (
                 <div key={p.id} className="col-xs-6 col-md-3 product-name">
-                  <i className={`fa fa-solid ${p.icon}`} style={iconStyle}></i>
+                  {p?.image ?// should show image or icon
+                    <img src={p.image.src} alt={p.image.alt} width={p.image.width ?? "250"} height={p.image.height ?? "250"} />
+                    : <i className={`fa fa-solid ${p.icon}`} style={iconStyle}></i>
+                  }
                   <h3>
-                    {p.name} <small><em>({p.sku})</em></small>
+                    {p.name}{showSku ? <small> <em>({p.sku})</em></small> : null}
                   </h3>
                   <div className="product-description">
                     {p.description}
