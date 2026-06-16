@@ -1,7 +1,7 @@
 import React from "react";
-import CartIcon from "../features/cart/components/CartIcon";
-import { NavigationData, NavigationItemsData } from "../types";
-import JsonData from "../data/data.json";
+import JsonData from "../../data/data.json";
+import { NavigationData, NavigationItemsData } from "../../types";
+import CartIcon from "../../features/cart/components/CartIcon";
 
 export const Navigation = () => {
   const data: NavigationData = JsonData.Navigation;
