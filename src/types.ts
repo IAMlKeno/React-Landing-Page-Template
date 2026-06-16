@@ -1,6 +1,7 @@
 export interface HeaderData {
   title: string;
   paragraph: string;
+  hero?: { image: string, };
 }
 
 export interface NavigationItemsData {

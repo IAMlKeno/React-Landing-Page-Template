@@ -8,7 +8,7 @@ interface Props {
 export const Header = ({ data }: Props) => {
   return (
     <header id="header">
-      <div className="intro">
+      <div className="intro" style={{ background: `url(${data?.hero.image}) center center no-repeat` }}>
         <div className="overlay">
           <div className="container">
             <div className="row">
