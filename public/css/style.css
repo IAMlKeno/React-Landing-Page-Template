@@ -635,3 +635,9 @@ label {
 .product-description {
   min-height: 7.5vh;
 }
+
+.product-grid-img-container {
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+}

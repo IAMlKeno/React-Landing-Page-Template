@@ -214,8 +214,22 @@
       "price": 25,
       "image": {
         "src": "../img/reva/product_img.webp",
-        "alt": "Reva product image",
+        "alt": "Reva product container",
         "height": "250",
+        "width": "250"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Kenoshea - Shea Butter",
+      "sku": "112",
+      "description": "Deep skin moisturization and a great lasting smell",
+      "icon": "fa-bottle-droplet",
+      "price": 25,
+      "image": {
+        "src": "../img/reva/kenoshea_1.png",
+        "alt": "Kenoshea shea butter container",
+        "height": "200",
         "width": "250"
       }
     }

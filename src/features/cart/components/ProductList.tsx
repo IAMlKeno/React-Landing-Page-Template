@@ -35,6 +35,11 @@ export default function ProductList() {
     return v ? v.quantity : 0;
   }
 
+  const handleLeaveFeedback = (evt: React.MouseEvent<HTMLButtonElement>) => {
+    evt.preventDefault();
+    window.open("https://forms.gle/cvmLkWT2ybYYdcCU6", "_blank", "noopener,noreferrer");
+  }
+
   return (
     <>
       <div id="products" className="text-center section">
@@ -47,8 +52,10 @@ export default function ProductList() {
             {productList &&
               productList.map((p: Product) => (
                 <div key={p.id} className="col-xs-6 col-md-3 product-name">
-                  {p?.image ?// should show image or icon
-                    <img src={p.image.src} alt={p.image.alt} width={p.image.width ?? "250"} height={p.image.height ?? "250"} />
+                  {p?.image ?
+                  <div className="product-grid-img-container">
+                      <img src={p.image.src} alt={p.image.alt} width={p.image.width ?? "250"} height={p.image.height ?? "250"} />
+                    </div>
                     : <i className={`fa fa-solid ${p.icon}`} style={iconStyle}></i>
                   }
                   <h3>
@@ -58,6 +65,9 @@ export default function ProductList() {
                     {p.description}
                   </div>
                   <div>
+                    <button className="btn btn-custom btn-lg" onClick={handleLeaveFeedback}>Leave Feedback</button>
+                    </div>
+                  {/* <div>
                     <div className="cart-actions-container" onClick={(e) => e.preventDefault()}>
                       <button className="cart-actions remove-cart" onClick={(e) => handleRemoveFromCart(e, p)}>
                         <i className="fa fa-minus"></i>
@@ -65,11 +75,11 @@ export default function ProductList() {
                       &nbsp;&nbsp;
                       Add to cart ({countInCart(p)})
                       &nbsp;&nbsp;
-                      <button className="cart-actions add-cart" onClick={(e) => handleAddToCart(e, p)}>
+                      <button className="btn cart-actions add-cart" onClick={(e) => handleAddToCart(e, p)}>
                         <i className="fa fa-add"></i>
                       </button>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               ))
             }
