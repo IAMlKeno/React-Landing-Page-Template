@@ -30,12 +30,7 @@ export default function ProductList() {
     dispatch({ type: 'REMOVE_FROM_CART', item });
   }
 
-  const countInCart = (product: Product): number => {
-    const v = cart.cartItems.find((item) => item.item.id == product.id);
-    return v ? v.quantity : 0;
-  }
-
-  const handleLeaveFeedback = (evt: React.MouseEvent<HTMLButtonElement>) => {
+  const handleLeaveFeedback = (evt: React.MouseEvent<HTMLButtonElement>, link: string) => {
     evt.preventDefault();
     window.open("https://forms.gle/cvmLkWT2ybYYdcCU6", "_blank", "noopener,noreferrer");
   }
@@ -65,21 +60,16 @@ export default function ProductList() {
                     {p.description}
                   </div>
                   <div>
-                    <button className="btn btn-custom btn-lg" onClick={handleLeaveFeedback}>Leave Feedback</button>
-                    </div>
-                  {/* <div>
-                    <div className="cart-actions-container" onClick={(e) => e.preventDefault()}>
-                      <button className="cart-actions remove-cart" onClick={(e) => handleRemoveFromCart(e, p)}>
-                        <i className="fa fa-minus"></i>
-                      </button>
-                      &nbsp;&nbsp;
-                      Add to cart ({countInCart(p)})
-                      &nbsp;&nbsp;
-                      <button className="btn cart-actions add-cart" onClick={(e) => handleAddToCart(e, p)}>
-                        <i className="fa fa-add"></i>
-                      </button>
-                    </div>
-                  </div> */}
+                    {p?.action == 'feedback' &&
+                      <button className="btn btn-sm btn-custom" onClick={(e) => handleLeaveFeedback(e, "https://forms.gle/cvmLkWT2ybYYdcCU6")}>Leave Feedback</button>
+                    }
+                    {p?.action == 'coming_soon' &&
+                      <button className="btn btn-sm btn-custom" onClick={(e) => e.preventDefault()}>Coming Soon</button>
+                    }
+                    {p?.action == 'cart' &&
+                      <CartActions product={p} onRemove={handleRemoveFromCart} onAdd={handleAddToCart} />
+                    }
+                  </div>
                 </div>
               ))
             }
@@ -88,4 +78,33 @@ export default function ProductList() {
       </div>
     </>
   );
+}
+
+interface CartActionProps {
+  product: Product;
+  onRemove: Function;
+  onAdd: Function;
+}
+
+function CartActions(props: CartActionProps) {
+  const { cart } = useClassCart();
+
+  const countInCart = (product: Product): number => {
+    const v = cart.cartItems.find((item) => item.item.id == product.id);
+    return v ? v.quantity : 0;
+  }
+
+  return (
+    <div className="cart-actions-container" onClick={(e) => e.preventDefault()}>
+      <button className="cart-actions remove-cart" onClick={(e) => props.onRemove(e, props.product)}>
+        <i className="fa fa-minus"></i>
+      </button>
+      &nbsp;&nbsp;
+      Add to cart ({countInCart(props.product)})
+      &nbsp;&nbsp;
+      <button className="btn cart-actions add-cart" onClick={(e) => props.onAdd(e, props.product)}>
+        <i className="fa fa-add"></i>
+      </button>
+    </div>
+  )
 }

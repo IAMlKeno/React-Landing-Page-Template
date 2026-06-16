@@ -1,4 +1,3 @@
-import React from "react";
 import type { HeaderData } from "../types";
 
 interface Props {
@@ -8,7 +7,7 @@ interface Props {
 export const Header = ({ data }: Props) => {
   return (
     <header id="header">
-      <div className="intro" style={{ background: `url(${data?.hero.image}) center center no-repeat` }}>
+      <div className="intro" style={{ backgroundImage: `url(${data?.hero.image})`, backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
         <div className="overlay">
           <div className="container">
             <div className="row">

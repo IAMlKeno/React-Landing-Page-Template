@@ -48,6 +48,7 @@ export const Contact = ({ data }: Props) => {
     <div>
       <div id="contact">
         <div className="container">
+          <div className="row">
           <div className="col-md-8">
             <div className="row">
               <div className="section-title">
@@ -150,6 +151,7 @@ export const Contact = ({ data }: Props) => {
                 </div>
               </div>
             }
+          </div>
           </div>
         </div>
       </div>

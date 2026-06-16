@@ -7,6 +7,7 @@ html {
   font-weight: 400;
   width: 100% !important;
   height: 100% !important;
+  overflow-x: hidden;
 }
 h2,
 h3,
@@ -168,7 +169,7 @@ hr {
   color: #fff;
   background-color: #5ca9fb;
   background-image: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
-  padding: 14px 34px;
+  padding: 10px 30px;
   letter-spacing: 1px;
   margin: 0;
   font-size: 15px;
@@ -296,7 +297,7 @@ header .intro-text {
   padding-right: 8px;
 }
 #about img {
-  width: 520px;
+  max-width: 450px;
   margin-top: 10px;
   background: #fff;
   border-right: 0;

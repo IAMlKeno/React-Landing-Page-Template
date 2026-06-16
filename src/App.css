@@ -12,20 +12,20 @@
 @media screen and (max-width: 400px) {
   #features {
     padding: 20px;
-    width: 111%;
   }
-  #about,
-  #services,
-  #testimonials,
-  #team,
-  #contact,
-  #footer,
-  .section {
-    width: 111%;
+  header .intro-text {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
   }
+}
 
-  #portfolio {
-    width: 110%;
+@media screen and (max-width: 450px) {
+  #features {
+    padding: 20px;
+  }
+  header .intro-text {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
   }
 }
 
