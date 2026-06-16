@@ -629,13 +629,9 @@ label {
   justify-content: space-between;
 }
 
-/* .product-name {
-  border: 1px solid;
-} */
 .product-name h3 {
   min-height: 7.5vh;
 }
 .product-description {
   min-height: 7.5vh;
-  /* border: 1px solid blue; */
 }
