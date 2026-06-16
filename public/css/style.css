@@ -208,7 +208,6 @@ a:focus,
   display: table;
   width: 100%;
   padding: 0;
-  background: url(../img/intro-bg.jpg) center center no-repeat;
   background-color: #e5e5e5;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -556,7 +555,9 @@ label {
   margin-bottom: 10px;
   display: block;
 }
-#contact .contact-item i.fa {
+#contact .contact-item i.fa,
+#contact .contact-item i.fab
+{
   margin-right: 10px;
 }
 #contact .social {
