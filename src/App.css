@@ -57,3 +57,42 @@
   left: 50%;
   transform: translateX(-50%);
 }
+body,
+#menu.navbar-default {
+  /* background-color: navy !important; */
+}
+
+.hasError {
+  padding: 5px;
+  border: 1px solid red;
+}
+
+.practice-components-container>div:nth-child(odd) {
+  background-color: lightgray;
+}
+
+.results li {
+  border: 1px dashed red;
+  width: 50%;
+  text-align: left;
+  margin: auto;
+}
+.results li input[type='checkbox'] {
+  margin-right: 20px;
+}
+.todo-title[data-complete="true"] {
+  text-decoration: line-through;
+}
+#temp-converter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px dashed;
+  width: 70%;
+}
+.form-control {
+  margin-bottom: 10px;
+}
+.form-control label {
+  margin-right: 10px;
+}

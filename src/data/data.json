@@ -1,7 +1,11 @@
 {
+  "SEO": {},
   "Header": {
-    "title": "Simple Cart",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+    "title": "Revā",
+    "paragraph": "What is Revā? The best hair care product.",
+    "hero": {
+      "image": "../img/reva/stock_productimg.jpg"
+    }
   },
   "Navigation": {
     "items": [
