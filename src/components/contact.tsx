@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import type { ContactData, SocialLinks } from "../types";
 
@@ -13,8 +13,14 @@ interface FormState {
 }
 
 const initialState: FormState = { name: "", email: "", message: "" };
+const emailjsConfig = {
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  publicKey: import.meta.env.VITE_EMAILJS_PUB_KEY,
+}
 
 export const Contact = ({ data }: Props) => {
+  const contactForm = useRef(null);
   const [{ name, email, message }, setState] = useState<FormState>(initialState);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -26,12 +32,11 @@ export const Contact = ({ data }: Props) => {
 
   const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // console.log(name, email, message);
 
     /* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.currentTarget, {
-        publicKey: "YOUR_PUBLIC_KEY",
+      .sendForm(emailjsConfig.serviceId, emailjsConfig.templateId, contactForm.current, {
+        publicKey: emailjsConfig.publicKey,
       })
       .then(
         () => {
@@ -58,7 +63,8 @@ export const Contact = ({ data }: Props) => {
                   get back to you as soon as possible.
                 </p>
               </div>
-              <form name="sentMessage" onSubmit={handleSubmit}>
+              <form name="sentMessage" onSubmit={handleSubmit} ref={contactForm}>
+                <input type="hidden" value={"Reva Products"} name="title"/>
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group">
@@ -129,7 +135,7 @@ export const Contact = ({ data }: Props) => {
             <div className="contact-item">
               <p>
                 <span>
-                  <i className="fa fa-envelope-o"></i> Email
+                  <i className="fa fa-envelope"></i> Email
                 </span>{" "}
                 {data ? data.email : "loading"}
               </p>
