@@ -1,5 +1,4 @@
-import React from "react";
-import type { FeatureItem } from "../types";
+import { FeatureItem } from "../../../types";
 
 interface Props {
   data?: FeatureItem[];
