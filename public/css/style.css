@@ -664,6 +664,10 @@ label {
 {
   margin-right: 10px;
 }
+#contact .contact-item a {
+  text-decoration: underline;
+  color: white;
+}
 #contact .social {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding-top: 50px;

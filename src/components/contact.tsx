@@ -115,31 +115,37 @@ export const Contact = ({ data }: Props) => {
             </div>
           </div>
           <div className="col-md-3 col-md-offset-1 contact-info">
-            <div className="contact-item">
-              <h3>Contact Info</h3>
-              <p>
-                <span>
-                  <i className="fa fa-map-marker"></i> Address
-                </span>
-                {data ? data.address : "loading"}
-              </p>
-            </div>
-            <div className="contact-item">
-              <p>
-                <span>
-                  <i className="fa fa-phone"></i> Phone
-                </span>{" "}
-                {data ? data.phone : "loading"}
-              </p>
-            </div>
-            <div className="contact-item">
-              <p>
-                <span>
-                  <i className="fa fa-envelope"></i> Email
-                </span>{" "}
-                {data ? data.email : "loading"}
-              </p>
-            </div>
+            {data?.address &&
+              <div className="contact-item">
+                <h3>Contact Info</h3>
+                <p>
+                  <span>
+                    <i className="fa fa-map-marker"></i> Address
+                  </span>
+                  {data.address}
+                </p>
+              </div>
+            }
+            {data?.phone &&
+              <div className="contact-item">
+                <p>
+                  <span>
+                    <i className="fa fa-phone"></i> Phone
+                  </span>{" "}
+                  <a href={`tel:${data.phone}`}>{data.phone}</a>
+                </p>
+              </div>
+            }
+            {data?.email &&
+              <div className="contact-item">
+                <p>
+                  <span>
+                    <i className="fa fa-envelope"></i> Email
+                  </span>{" "}
+                  <a href={`mailto:${data.email}`}>{data.email}</a>
+                </p>
+              </div>
+            }
           </div>
           <div className="col-md-12">
             {data?.social &&
