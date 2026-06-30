@@ -64,7 +64,7 @@ export const Contact = ({ data }: Props) => {
                 </p>
               </div>
               <form name="sentMessage" onSubmit={handleSubmit} ref={contactForm}>
-                <input type="hidden" value={"Reva Products"} name="title"/>
+                <input type="hidden" value={"Consultation Request"} name="title"/>
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group">
@@ -164,7 +164,7 @@ export const Contact = ({ data }: Props) => {
       <div id="footer">
         <div className="container text-center">
           <p>
-            &copy; 2025 Design by {"Avanti Insieme"}
+            &copy; 2026 Avanti Insieme Consulting. All rights reserved.
           </p>
         </div>
       </div>
