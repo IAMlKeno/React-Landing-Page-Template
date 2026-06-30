@@ -24,7 +24,7 @@ function createRow(children: ServiceItem[]) {
     ));
 
     const row = (
-      <div className="row">
+      <div key={`row-[${start}-${end}]`} className="row">
         {rowContent}
       </div>
     )
