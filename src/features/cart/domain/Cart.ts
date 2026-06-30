@@ -1,4 +1,5 @@
 import { Product } from "./Product";
+import { v4 as uuid } from 'uuid';
 
 export class CartItem {
   item: Product;
@@ -25,7 +26,7 @@ export class Cart implements ICart {
   totalCost: number;
 
   constructor(cart?: ICart) {
-    this.id = cart?.id ?? crypto.randomUUID();
+    this.id = cart?.id ?? uuid();
     this.cartItems = cart?.cartItems ?? [];
     this.totalItems = cart?.totalItems ??  0;
     this.totalCost = cart?.totalCost ?? 0.0;
