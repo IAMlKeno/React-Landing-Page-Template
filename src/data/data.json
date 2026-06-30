@@ -1,8 +1,12 @@
 {
-  "SEO": {},
+  "SEO": {
+    "title": "Avanti Insieme Consulting | IT Solutions & Digital Transformation",
+    "description": "Avanti Insieme Consulting delivers end-to-end IT services: web development, eCommerce, hardware installation, CMS, CRM, and AI solutions — growing with your business.",
+    "keywords": "IT consulting, web development, eCommerce customization, CMS, CRM, AI solutions, hardware installation, digital transformation, Cornwall PEI"
+  },
   "Header": {
-    "title": "",
-    "paragraph": "",
+    "title": "Where Digital Meets Human",
+    "paragraph": "Avanti Insieme Consulting bridges the gap between hardware, software, and the people who use it — delivering end-to-end IT solutions that grow with your business, not just for the moment.",
     "hero": {
       "image": "../img/avanti/avanti_header.png"
     }
@@ -19,17 +23,13 @@
     }
   },
   "About": {
-    "paragraph": "Avanti Insieme",
-    "whyHeader": "Why Choose Avanti?",
+    "paragraph": "At Avanti Insieme Consulting, 'Avanti Insieme' means 'Moving Forward Together' — and that's not just a name, it's our operating principle. We don't build one-off solutions and disappear. We become your long-term technology partner, invested in your success as much as our own.",
+    "whyHeader": "Why Choose Avanti Insieme?",
     "listOfWhys": [
-      [
-        "We believe that your growth = our growth",
-        "Hydration-first (most oils skip this step)"
-      ],
-      [
-        "Implementing as much automation as possible means more time for you to focus on your craft",
-        "Focused on scalp health, not just hair growth hype"
-      ]
+      ["We believe your growth = our growth — our reputation is built on your results"],
+      ["We bridge digital, hardware, and human expertise under one roof — no handoffs, no gaps"],
+      ["Implementing automation wherever possible means more time for you to focus on your craft"],
+      ["We speak your language, not tech jargon — strategy and execution you can actually understand"]
     ]
   },
   "Gallery": [
@@ -81,19 +81,34 @@
   ],
   "Services": [
     {
-      "icon": "fa fab fa-wordpress",
-      "name": "Content Management Systems",
-      "text": "Whether it's Drupal, or Wordpress, we can modernize, featurize and help you capitalize on the powerful features of your CMS."
+      "icon": "fa fa-code",
+      "name": "Website Development & Modernization",
+      "text": "From ground-up builds to full redesigns, we craft fast, accessible, and conversion-focused websites that reflect your brand and work flawlessly across every device."
     },
     {
       "icon": "fa fa-cart-arrow-down",
-      "name": "eCommerce",
-      "text": "Capitalize on the digital age with out-of-the-box or totally custom online shopping options."
+      "name": "eCommerce Customization",
+      "text": "Sell more with a storefront built around your customers. We configure, extend, and customize eCommerce platforms so your products reach buyers with zero friction."
+    },
+    {
+      "icon": "fa fa-desktop",
+      "name": "Hardware Installation",
+      "text": "Computers, monitors, televisions, sound systems, and more — professionally installed, configured, and tested so your team hits the ground running from day one."
+    },
+    {
+      "icon": "fa fab fa-wordpress",
+      "name": "CMS Installation & Customization",
+      "text": "Whether it's WordPress, Drupal, or another platform, we tailor your Content Management System to fit your workflow so publishing content is effortless."
     },
     {
       "icon": "fa fa-users-rectangle",
-      "name": "Manage Customers",
-      "text": "In tech talk, CRMs or Customer Relationship Management systems are a supreme tool for managing leads and broaching existing clientelle. Don't rely on simple text messaging, we can help you reach more people effortlessly."
+      "name": "Customer Relationship Management",
+      "text": "Stop managing leads with sticky notes. We design and deploy CRMs that centralize your customer data, automate follow-ups, and help you close more business."
+    },
+    {
+      "icon": "fa fa-robot",
+      "name": "Artificial Intelligence Solutions",
+      "text": "From intelligent chatbots to workflow automation and custom AI integrations, we implement practical AI that saves time, reduces errors, and scales with you."
     }
   ],
   "Testimonials": [
@@ -169,24 +184,24 @@
   },
   "Features": [
     {
+      "icon": "fa fa-layer-group",
+      "title": "End-to-End Expertise",
+      "text": "From hardware setup to cloud software to AI — we handle every layer of your technology stack so you never have to juggle multiple vendors."
+    },
+    {
+      "icon": "fa fa-handshake",
+      "title": "Long-Term Partnership",
+      "text": "We don't disappear after launch. We invest in your growth, evolving your technology as your business scales."
+    },
+    {
+      "icon": "fa fa-robot",
+      "title": "Automation-First Mindset",
+      "text": "We look for every opportunity to automate repetitive work — freeing your team to focus on what only humans can do."
+    },
+    {
       "icon": "fa fa-comments",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
-    },
-    {
-      "icon": "fa fa-bullhorn",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
-    },
-    {
-      "icon": "fa fa-people-group",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
-    },
-    {
-      "icon": "fa fa-magic",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "Human-Centered Approach",
+      "text": "No jargon, no confusion. We translate complex technology into plain language strategies you can actually understand and act on."
     }
   ],
   "Products": [
