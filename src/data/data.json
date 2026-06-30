@@ -1,33 +1,33 @@
 {
   "SEO": {},
   "Header": {
-    "title": "Revā",
-    "paragraph": "What is Revā? The best hair care product.",
+    "title": "",
+    "paragraph": "",
     "hero": {
-      "image": "../img/reva/stock_productimg.jpg"
+      "image": "../img/avanti/avanti_header.png"
     }
   },
   "Navigation": {
     "items": [
-      { "href": "#products", "className": ["page-scroll", "menu-item"], "label": "Products" },
+      { "href": "#services", "className": ["page-scroll", "menu-item"], "label": "Services" },
       { "href": "#about", "className": ["page-scroll"], "label": "About" },
       { "href": "#contact", "className": ["page-scroll"], "label": "Contact" }
     ],
     "logo": {
       "type": "text",
-      "value": "Revā by Hair Haven"
+      "value": "Avanti Insieme"
     }
   },
   "About": {
-    "paragraph": "Revā is the best hair care product",
-    "whyHeader": "Why Choose Revā?",
+    "paragraph": "Avanti Insieme",
+    "whyHeader": "Why Choose Avanti?",
     "listOfWhys": [
       [
-        "Designed specifically for textured hair & protective styles",
+        "We believe that your growth = our growth",
         "Hydration-first (most oils skip this step)"
       ],
       [
-        "Lightweight → no buildup, no clogged follicles",
+        "Implementing as much automation as possible means more time for you to focus on your craft",
         "Focused on scalp health, not just hair growth hype"
       ]
     ]
@@ -81,34 +81,19 @@
   ],
   "Services": [
     {
-      "icon": "fa fa-wordpress",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fab fa-wordpress",
+      "name": "Content Management Systems",
+      "text": "Whether it's Drupal, or Wordpress, we can modernize, featurize and help you capitalize on the powerful features of your CMS."
     },
     {
       "icon": "fa fa-cart-arrow-down",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "name": "eCommerce",
+      "text": "Capitalize on the digital age with out-of-the-box or totally custom online shopping options."
     },
     {
-      "icon": "fa fa-cloud-download",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "fa fa-language",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "fa fa-plane",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "fa fa-pie-chart",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-users-rectangle",
+      "name": "Manage Customers",
+      "text": "In tech talk, CRMs or Customer Relationship Management systems are a supreme tool for managing leads and broaching existing clientelle. Don't rely on simple text messaging, we can help you reach more people effortlessly."
     }
   ],
   "Testimonials": [
