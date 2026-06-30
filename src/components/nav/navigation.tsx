@@ -1,19 +1,13 @@
-import { useState } from "react";
 import JsonData from "../../data/data.json";
 import { NavigationData, NavigationItemsData } from "../../types";
-import CartIcon from "../../features/cart/components/CartIcon";
 
 export const Navigation = () => {
   const data: NavigationData = JsonData.Navigation;
-  const [showCart, setShowCart] = useState<boolean>(false);
 
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
         <div className="navbar-header">
-          <span className="cart-icon-wrapper visible-xs-inline-block">
-            {showCart ? <CartIcon /> : null}
-          </span>
           <button
             type="button"
             className="navbar-toggle collapsed"
@@ -47,10 +41,6 @@ export const Navigation = () => {
                   </a>
                 </li>
               ))
-            }
-            {showCart ?
-              <li className="hidden-xs"><CartIcon /></li>
-              : null
             }
           </ul>
         </div>
