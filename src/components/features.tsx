@@ -10,7 +10,7 @@ export const Features = ({ data }: Props) => {
     <div id="features" className="text-center">
       <div className="container">
         <div className="col-md-10 col-md-offset-1 section-title">
-          <h2>Features</h2>
+          <h2>What Sets Us Apart</h2>
         </div>
         <div className="row">
           {data
