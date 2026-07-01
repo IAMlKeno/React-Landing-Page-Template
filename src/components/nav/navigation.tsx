@@ -23,7 +23,9 @@ export const Navigation = () => {
     <header id="ai-header" aria-label="Site header">
       <nav className="ai-nav" aria-label="Primary">
         <a href="#page-top" className="ai-logo" onClick={closeMenu}>
-          <span className="ai-logo-badge" aria-hidden="true">A</span>
+          <span className="ai-logo-badge" aria-hidden="true">
+            <img src="/img/avanti/avanti_logo_square_nobg.png" width={30}/>
+          </span>
           <span className="ai-logo-text">{data.logo.value}</span>
         </a>
 

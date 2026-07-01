@@ -189,7 +189,7 @@ a:focus-visible {
   width: 34px;
   height: 34px;
   border-radius: 9px;
-  background: var(--color-accent);
+  background: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -379,8 +379,10 @@ a:focus-visible {
   background-color: var(--color-primary);
 }
 .ai-overlay {
+  max-width: 1200px;
   width: 100%;
   padding: 120px 24px;
+  margin: 0px auto;
 }
 .ai-hero-content {
   max-width: 760px;
