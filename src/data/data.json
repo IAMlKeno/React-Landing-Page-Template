@@ -81,32 +81,32 @@
   ],
   "Services": [
     {
-      "icon": "fa fa-code",
+      "icon": "fa-solid fa-code",
       "name": "Website Development & Modernization",
       "text": "From ground-up builds to full redesigns, we craft fast, accessible, and conversion-focused websites that reflect your brand and work flawlessly across every device."
     },
     {
-      "icon": "fa fa-cart-arrow-down",
+      "icon": "fa-solid fa-cart-shopping",
       "name": "eCommerce Customization",
       "text": "Sell more with a storefront built around your customers. We configure, extend, and customize eCommerce platforms so your products reach buyers with zero friction."
     },
     {
-      "icon": "fa fa-desktop",
+      "icon": "fa-solid fa-desktop",
       "name": "Hardware Installation",
       "text": "Computers, monitors, televisions, sound systems, and more — professionally installed, configured, and tested so your team hits the ground running from day one."
     },
     {
-      "icon": "fa fab fa-wordpress",
+      "icon": "fa-brands fa-wordpress",
       "name": "CMS Installation & Customization",
       "text": "Whether it's WordPress, Drupal, or another platform, we tailor your Content Management System to fit your workflow so publishing content is effortless."
     },
     {
-      "icon": "fa fa-users-rectangle",
+      "icon": "fa-solid fa-users",
       "name": "Customer Relationship Management",
       "text": "Stop managing leads with sticky notes. We design and deploy CRMs that centralize your customer data, automate follow-ups, and help you close more business."
     },
     {
-      "icon": "fa fa-robot",
+      "icon": "fa-solid fa-robot",
       "name": "Artificial Intelligence Solutions",
       "text": "From intelligent chatbots to workflow automation and custom AI integrations, we implement practical AI that saves time, reduces errors, and scales with you."
     }
@@ -184,22 +184,22 @@
   },
   "Features": [
     {
-      "icon": "fa fa-layer-group",
+      "icon": "fa-solid fa-layer-group",
       "title": "End-to-End Expertise",
       "text": "From hardware setup to cloud software to AI — we handle every layer of your technology stack so you never have to juggle multiple vendors."
     },
     {
-      "icon": "fa fa-handshake",
+      "icon": "fa-solid fa-handshake",
       "title": "Long-Term Partnership",
       "text": "We don't disappear after launch. We invest in your growth, evolving your technology as your business scales."
     },
     {
-      "icon": "fa fa-robot",
+      "icon": "fa-solid fa-robot",
       "title": "Automation-First Mindset",
       "text": "We look for every opportunity to automate repetitive work — freeing your team to focus on what only humans can do."
     },
     {
-      "icon": "fa fa-comments",
+      "icon": "fa-solid fa-comments",
       "title": "Human-Centered Approach",
       "text": "No jargon, no confusion. We translate complex technology into plain language strategies you can actually understand and act on."
     }

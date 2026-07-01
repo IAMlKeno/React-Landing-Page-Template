@@ -574,47 +574,80 @@ a:focus-visible {
    Services Section
    ============================================================ */
 #services {
-  padding: 100px 0;
-  background: var(--gradient-brand);
-  color: var(--color-white);
+  background: var(--color-white);
+  padding: 96px 24px;
+  scroll-margin-top: 74px;
 }
-#services .service-desc {
-  margin: 10px 10px 20px;
+.ai-services-container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
-#services h2 {
-  color: var(--color-white);
+.ai-section-label {
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 14px;
 }
-#services .section-title h2::after {
-  position: absolute;
-  content: "";
-  background: rgba(255, 255, 255, 0.3);
-  height: 4px;
-  width: 60px;
-  bottom: 0;
-  margin-left: -30px;
-  left: 50%;
+#services h2,
+#about h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: clamp(28px, 3.4vw, 42px);
+  letter-spacing: -0.6px;
+  color: var(--color-primary);
+  text-transform: none;
 }
-#services i.fa {
-  font-size: 42px;
-  width: 120px;
-  height: 120px;
-  padding: 40px 0;
-  background: rgba(255, 255, 255, 0.12);
+#services .ai-section-desc {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  max-width: 560px;
+  margin: 0 auto 58px;
+}
+.ai-service-card {
+  background: var(--color-white);
+  border: 1px solid #e4ebee;
+  border-radius: 16px;
+  padding: 34px 30px;
+  box-shadow: 0 1px 3px rgba(17, 37, 65, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
+}
+.ai-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(17, 37, 65, 0.12);
+  border-color: #cfe0dd;
+}
+.ai-service-icon-box {
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
-  color: var(--color-white);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.08);
-  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: #e3efed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
 }
-#services h3 {
-  font-weight: 500;
-  padding: 5px 0;
-  color: var(--color-white);
+.ai-service-icon-box i {
+  color: var(--color-accent);
+  font-size: 25px;
 }
-#services p {
-  color: rgba(255, 255, 255, 0.8);
+.ai-service-card h3 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.3;
+  color: var(--color-primary);
+  margin: 0 0 12px;
 }
-#services .service-desc {
-  margin-bottom: 40px;
+.ai-service-card p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  margin: 0;
 }
 
 /* ============================================================
