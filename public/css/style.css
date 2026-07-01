@@ -323,7 +323,6 @@ a:focus-visible {
 .section-title h2::after {
   position: absolute;
   content: "";
-  background: var(--gradient-reverse);
   height: 4px;
   width: 60px;
   bottom: 0;
