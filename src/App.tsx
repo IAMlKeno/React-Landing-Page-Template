@@ -5,15 +5,9 @@ import { Features } from "./components/features";
 import { About } from "./components/about";
 import { Contact } from "./components/contact";
 import JsonData from "./data/data.json";
-import SmoothScroll from "smooth-scroll";
 import type { LandingPageData } from "./types";
 import "./App.css";
 import { Services } from "./components/services";
-
-export const scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 1000,
-  speedAsDuration: true,
-});
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState<LandingPageData | null>(null);
