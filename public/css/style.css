@@ -2,23 +2,35 @@
    CSS Custom Properties — Avanti Insieme Brand Palette
    ============================================================ */
 :root {
-  --color-primary:    #112541;
-  --color-accent:     #26736d;
-  --color-secondary:  #7999a4;
-  --color-light:      #eef3f5;
-  --color-white:      #ffffff;
-  --color-text:       #1a2e3b;
-  --color-text-muted: #4e6677;
-  --gradient-brand:   linear-gradient(135deg, #112541 0%, #26736d 100%);
-  --gradient-reverse: linear-gradient(135deg, #26736d 0%, #112541 100%);
+  --color-primary:       #112541;
+  --color-accent:        #26736d;
+  --color-accent-hover:  #2e857e;
+  --color-secondary:     #7999a4;
+  --color-light:         #eef3f5;
+  --color-white:         #ffffff;
+  --color-text:          #1a2e3b;
+  --color-text-muted:    #46616b;
+  --color-teal-light:    #9fe3da;
+  --color-footer:        #0a1729;
+  --color-input-bg:      #0c1c33;
+  --color-input-border:  #2e4a66;
+  --gradient-brand:      linear-gradient(135deg, #112541 0%, #26736d 100%);
+  --gradient-reverse:    linear-gradient(135deg, #26736d 0%, #112541 100%);
 }
 
 /* ============================================================
    Base & Typography
    ============================================================ */
+html {
+  scroll-behavior: smooth;
+}
+::selection {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
 body,
 html {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   color: var(--color-text-muted);
@@ -30,7 +42,7 @@ html {
 h2,
 h3,
 h4 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
 }
 h2 {
   text-transform: uppercase;
