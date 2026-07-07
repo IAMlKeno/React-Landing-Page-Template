@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import type { ContactData, SocialLinks } from "../types";
+import JsonData from "../data/data.json";
 
 interface Props {
   data?: ContactData;
@@ -95,7 +96,7 @@ export const Contact = ({ data }: Props) => {
                   name="message"
                   className="form-control"
                   rows={5}
-                  placeholder="Tell us about your project..."
+                  placeholder="Tell us about your strength goals..."
                   value={message}
                   required
                   onChange={handleChange}
@@ -155,7 +156,7 @@ export const Contact = ({ data }: Props) => {
 
       <footer id="footer">
         <div className="ai-footer-inner">
-          <p>&copy; 2026 Avanti Insieme Consulting. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {JsonData.Navigation.logo.value}. All rights reserved.</p>
           {data?.social && (
             <div className="ai-social-links">
               {data.social.links.map((social: SocialLinks, idx: number) => (

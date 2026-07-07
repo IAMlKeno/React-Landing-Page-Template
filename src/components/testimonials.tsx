@@ -1,36 +1,36 @@
-import React from "react";
 import type { TestimonialItem } from "../types";
+import { CardGrid } from "./common/CardGrid";
 
 interface Props {
   data?: TestimonialItem[];
 }
 
-export const Testimonials = ({ data }: Props) => {
-  return (
-    <div id="testimonials">
-      <div className="container">
-        <div className="section-title text-center">
-          <h2>What our clients say</h2>
-        </div>
-        <div className="row">
-          {data
-            ? data.map((d, i) => (
-                <div key={`${d.name}-${i}`} className="col-md-4">
-                  <div className="testimonial">
-                    <div className="testimonial-image">
-                      {" "}
-                      <img src={d.img} alt="" />{" "}
-                    </div>
-                    <div className="testimonial-content">
-                      <p>"{d.text}"</p>
-                      <div className="testimonial-meta"> - {d.name} </div>
-                    </div>
+export const Testimonials = ({ data }: Props) => (
+  <div id="testimonials">
+    <div className="ai-testimonials-container">
+      <div className="section-title">
+        <span className="ai-section-label">Client Results</span>
+        <h2>What Our Clients Say</h2>
+      </div>
+      <CardGrid minCardWidth="280px" gap="26px">
+        {data
+          ? data.map((t, i) => (
+              <div key={`${t.name}-${i}`} className="ai-testimonial-card">
+                <div className="ai-testimonial-header">
+                  <img className="ai-testimonial-img" src={t.img} alt="" loading="lazy" />
+                  <div>
+                    <div className="ai-testimonial-name">{t.name}</div>
+                    <div className="ai-testimonial-program">{t.program}</div>
                   </div>
                 </div>
-              ))
-            : "loading"}
-        </div>
-      </div>
+                <p className="ai-testimonial-text">{t.text}</p>
+                <p className="ai-testimonial-result">
+                  <i className="fa-solid fa-arrow-trend-up" aria-hidden="true" /> {t.result}
+                </p>
+              </div>
+            ))
+          : null}
+      </CardGrid>
     </div>
-  );
-};
+  </div>
+);

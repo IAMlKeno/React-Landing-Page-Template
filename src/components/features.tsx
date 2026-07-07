@@ -10,7 +10,8 @@ export const Features = ({ data }: Props) => (
   <div id="features">
     <div className="ai-features-container">
       <div className="ai-features-header section-title">
-        <h2>What Sets Us Apart</h2>
+        <span className="ai-section-label">Why Choose Coaching</span>
+        <h2>More Than Personal Training</h2>
         <span className="ai-section-divider" aria-hidden="true" />
       </div>
       <CardGrid minCardWidth="220px" gap="40px 28px">

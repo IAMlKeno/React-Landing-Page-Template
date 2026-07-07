@@ -8,3 +8,18 @@ HTMLDialogElement.prototype.showModal = function (this: HTMLDialogElement) {
 HTMLDialogElement.prototype.close = function (this: HTMLDialogElement) {
   this.removeAttribute('open');
 };
+
+// jsdom does not implement window.matchMedia, used by the Navigation
+// component's mobile/desktop breakpoint check.
+window.matchMedia = window.matchMedia || function (query: string) {
+  return {
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: () => {},
+    removeListener: () => {},
+    addEventListener: () => {},
+    removeEventListener: () => {},
+    dispatchEvent: () => false,
+  } as unknown as MediaQueryList;
+};

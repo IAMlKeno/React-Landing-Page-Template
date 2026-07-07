@@ -1,170 +1,265 @@
 {
   "SEO": {
-    "title": "Avanti Insieme Consulting | IT Solutions & Digital Transformation",
-    "description": "Avanti Insieme Consulting delivers end-to-end IT services: web development, eCommerce, hardware installation, CMS, CRM, and AI solutions — growing with your business.",
-    "keywords": "IT consulting, web development, eCommerce customization, CMS, CRM, AI solutions, hardware installation, digital transformation, Cornwall PEI"
-  },
-  "Header": {
-    "title": "Where Digital Meets Human",
-    "paragraph": "Avanti Insieme Consulting bridges the gap between hardware, software, and the people who use it — delivering end-to-end IT solutions that grow with your business, not just for the moment.",
-    "hero": {
-      "image": "../img/avanti/avanti_header.png"
-    }
+    "title": "Squat with Confidence | Strength Coaching in Prince Edward Island",
+    "description": "Personalized strength coaching for beginners, busy professionals and aspiring powerlifters. Book a free consultation with a certified personal trainer serving Prince Edward Island.",
+    "keywords": "Personal Trainer PEI, Strength Coach PEI, Powerlifting Coach PEI, Squat Coaching PEI, Beginner Strength Training PEI, Cornwall PEI"
   },
   "Navigation": {
     "items": [
-      { "href": "#services", "className": ["page-scroll", "menu-item"], "label": "Services" },
+      { "href": "#programs", "className": ["page-scroll", "menu-item"], "label": "Programs" },
+      { "href": "#process", "className": ["page-scroll"], "label": "Process" },
       { "href": "#about", "className": ["page-scroll"], "label": "About" },
+      { "href": "#testimonials", "className": ["page-scroll"], "label": "Testimonials" },
+      { "href": "#faq", "className": ["page-scroll"], "label": "FAQ" },
       { "href": "#contact", "className": ["page-scroll"], "label": "Contact" }
     ],
     "logo": {
       "type": "text",
-      "value": "Avanti Insieme"
+      "value": "Squat with Confidence"
     }
   },
+  "Header": {
+    "title": "Build Strength.\nGain Confidence.",
+    "paragraph": "Personalized strength coaching for beginners, busy professionals and aspiring powerlifters.",
+    "badge": "Strength Coaching in Prince Edward Island",
+    "hero": {
+      "image": "/img/swc/hero-squat-coaching.jpg"
+    }
+  },
+  "Stats": [
+    { "icon": "fa-solid fa-user-check", "label": "Personalized Coaching" },
+    { "icon": "fa-solid fa-chart-line", "label": "Evidence-Based Programming" },
+    { "icon": "fa-solid fa-location-dot", "label": "Local Coaching" },
+    { "icon": "fa-solid fa-seedling", "label": "Beginner Friendly" }
+  ],
+  "Features": [
+    {
+      "icon": "fa-solid fa-user-check",
+      "title": "Accountability",
+      "text": "Regular check-ins and coaching sessions keep you consistent, even when motivation dips."
+    },
+    {
+      "icon": "fa-solid fa-medal",
+      "title": "Proper Technique",
+      "text": "Video form analysis and hands-on coaching so every rep builds strength safely, not injuries."
+    },
+    {
+      "icon": "fa-solid fa-face-smile",
+      "title": "Confidence",
+      "text": "Walk into any gym knowing exactly what to do and how to do it well."
+    },
+    {
+      "icon": "fa-solid fa-sliders",
+      "title": "Individualized Programming",
+      "text": "Your program is built around your goals, schedule and starting point — not a generic template."
+    },
+    {
+      "icon": "fa-solid fa-arrow-trend-up",
+      "title": "Sustainable Progress",
+      "text": "Programming that builds week over week so results last well beyond the coaching period."
+    },
+    {
+      "icon": "fa-solid fa-shield-heart",
+      "title": "Injury Prevention",
+      "text": "Mobility work and movement screening reduce risk so training fits into your life, not around it."
+    }
+  ],
+  "Programs": [
+    {
+      "id": "squat-with-confidence",
+      "icon": "fa-solid fa-dumbbell",
+      "title": "Squat with Confidence",
+      "description": "Master the squat with confidence and proper technique.",
+      "audience": "Beginners and anyone who wants to squat safely and effectively",
+      "duration": "6 weeks",
+      "features": [
+        "Initial assessment",
+        "Personalized squat program",
+        "Mobility recommendations",
+        "Six coaching sessions",
+        "Video form analysis",
+        "Weekly accountability",
+        "Progress tracking"
+      ],
+      "startingPrice": 349,
+      "ctaLabel": "Book Free Consultation"
+    },
+    {
+      "id": "bench-with-confidence",
+      "icon": "fa-solid fa-hand-fist",
+      "title": "Bench with Confidence",
+      "description": "Improve your bench press safely while building upper-body strength.",
+      "audience": "Anyone looking to build a safer, stronger bench press",
+      "duration": "6 weeks",
+      "features": [
+        "Shoulder assessment",
+        "Bench technique coaching",
+        "Accessory exercises",
+        "Spotting fundamentals",
+        "Weekly check-ins",
+        "Video review"
+      ],
+      "startingPrice": 349,
+      "ctaLabel": "Book Free Consultation"
+    },
+    {
+      "id": "beginner-powerlifting",
+      "icon": "fa-solid fa-trophy",
+      "title": "Beginner Powerlifting",
+      "description": "Learn the squat, bench and deadlift correctly.",
+      "audience": "Beginners preparing for their first powerlifting meet",
+      "duration": "8 weeks",
+      "features": [
+        "Complete assessment",
+        "Personalized programming",
+        "Eight coaching sessions",
+        "Competition standards",
+        "Progress testing",
+        "Nutrition guidance"
+      ],
+      "startingPrice": 549,
+      "ctaLabel": "Book Free Consultation"
+    },
+    {
+      "id": "strength-for-busy-professionals",
+      "icon": "fa-solid fa-briefcase",
+      "title": "Strength for Busy Professionals",
+      "description": "Efficient coaching designed for busy schedules.",
+      "audience": "Busy professionals who need efficient, effective training",
+      "duration": "Ongoing, monthly",
+      "features": [
+        "Three-day training program",
+        "45-minute workouts",
+        "Lifestyle coaching",
+        "Habit building",
+        "Recovery planning",
+        "Monthly progress review"
+      ],
+      "startingPrice": 349,
+      "ctaLabel": "Book Free Consultation"
+    },
+    {
+      "id": "six-week-strength-transformation",
+      "icon": "fa-solid fa-fire",
+      "title": "Six Week Strength Transformation",
+      "description": "Build strength while developing healthy habits.",
+      "audience": "Anyone ready for a focused, guided transformation",
+      "duration": "6 weeks",
+      "features": [
+        "Assessment",
+        "Two coached sessions weekly",
+        "Nutrition guidance",
+        "Habit coaching",
+        "Weekly check-ins",
+        "Body measurements",
+        "Progress photos",
+        "Graduation review"
+      ],
+      "startingPrice": 649,
+      "featured": true,
+      "ctaLabel": "Book Free Consultation"
+    }
+  ],
+  "CoachingProcess": [
+    {
+      "step": 1,
+      "title": "Book Consultation",
+      "text": "20-minute conversation about goals."
+    },
+    {
+      "step": 2,
+      "title": "Assessment",
+      "text": "Movement screen and goal setting."
+    },
+    {
+      "step": 3,
+      "title": "Personalized Plan",
+      "text": "Receive your custom training program."
+    },
+    {
+      "step": 4,
+      "title": "Build Confidence",
+      "text": "Consistent coaching, accountability and measurable progress."
+    }
+  ],
   "About": {
-    "paragraph": "At Avanti Insieme Consulting, 'Avanti Insieme' means 'Moving Forward Together' — and that's not just a name, it's our operating principle. We don't build one-off solutions and disappear. We become your long-term technology partner, invested in your success as much as our own.",
-    "whyHeader": "Why Choose Avanti Insieme?",
+    "image": {
+      "src": "/img/swc/coach-portrait.jpg",
+      "alt": "Coach coaching a client through a squat"
+    },
+    "paragraph": "I'm a Certified Personal Trainer, strongman athlete and powerlifting competitor with a passion for teaching beginners. I believe confidence comes before intensity — so every program starts with proper technique and a plan you can stick to, not a max-effort lift on day one. Based in Prince Edward Island, I coach people at every stage of their strength journey.",
+    "whyHeader": "Why Train With Me",
     "listOfWhys": [
-      ["We believe your growth = our growth — our reputation is built on your results"],
-      ["We bridge digital, hardware, and human expertise under one roof — no handoffs, no gaps"],
-      ["Implementing automation wherever possible means more time for you to focus on your craft"],
-      ["We speak your language, not tech jargon — strategy and execution you can actually understand"]
+      ["Certified Personal Trainer"],
+      ["Strongman athlete"],
+      ["Powerlifting experience"],
+      ["Passion for teaching beginners"],
+      ["Focus on confidence before intensity"],
+      ["Serving Prince Edward Island"]
     ]
   },
-  "Gallery": [
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/01-large.jpg",
-      "smallImage": "img/portfolio/01-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/02-large.jpg",
-      "smallImage": "img/portfolio/02-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/03-large.jpg",
-      "smallImage": "img/portfolio/03-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/04-large.jpg",
-      "smallImage": "img/portfolio/04-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/05-large.jpg",
-      "smallImage": "img/portfolio/05-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/06-large.jpg",
-      "smallImage": "img/portfolio/06-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/07-large.jpg",
-      "smallImage": "img/portfolio/07-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/08-large.jpg",
-      "smallImage": "img/portfolio/08-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/09-large.jpg",
-      "smallImage": "img/portfolio/09-small.jpg"
-    }
-  ],
-  "Services": [
-    {
-      "icon": "fa-solid fa-code",
-      "name": "Website Development & Modernization",
-      "text": "From ground-up builds to full redesigns, we craft fast, accessible, and conversion-focused websites that reflect your brand and work flawlessly across every device."
-    },
-    {
-      "icon": "fa-solid fa-cart-shopping",
-      "name": "eCommerce Customization",
-      "text": "Sell more with a storefront built around your customers. We configure, extend, and customize eCommerce platforms so your products reach buyers with zero friction."
-    },
-    {
-      "icon": "fa-solid fa-desktop",
-      "name": "Hardware Installation",
-      "text": "Computers, monitors, televisions, sound systems, and more — professionally installed, configured, and tested so your team hits the ground running from day one."
-    },
-    {
-      "icon": "fa-brands fa-wordpress",
-      "name": "CMS Installation & Customization",
-      "text": "Whether it's WordPress, Drupal, or another platform, we tailor your Content Management System to fit your workflow so publishing content is effortless."
-    },
-    {
-      "icon": "fa-solid fa-users",
-      "name": "Customer Relationship Management",
-      "text": "Stop managing leads with sticky notes. We design and deploy CRMs that centralize your customer data, automate follow-ups, and help you close more business."
-    },
-    {
-      "icon": "fa-solid fa-robot",
-      "name": "Artificial Intelligence Solutions",
-      "text": "From intelligent chatbots to workflow automation and custom AI integrations, we implement practical AI that saves time, reduces errors, and scales with you."
-    }
-  ],
   "Testimonials": [
     {
-      "img": "img/testimonials/01.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "img": "/img/swc/testimonials/client-01.jpg",
+      "text": "\"I walked in nervous about barely knowing what a squat rack was. Six weeks later I was squatting with real confidence and proper form.\"",
+      "name": "Sarah M.",
+      "program": "Squat with Confidence",
+      "result": "Added 40 lbs to her squat and no longer feels intimidated at the gym"
     },
     {
-      "img": "img/testimonials/02.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "img": "/img/swc/testimonials/client-02.jpg",
+      "text": "\"As a busy professional I never thought I'd stick to a training program. The 45-minute sessions made it actually possible.\"",
+      "name": "James T.",
+      "program": "Strength for Busy Professionals",
+      "result": "Trained consistently 3x/week for 3 months straight"
     },
     {
-      "img": "img/testimonials/03.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "img": "/img/swc/testimonials/client-03.jpg",
+      "text": "\"My first powerlifting meet felt achievable because every lift was coached and tested well before competition day.\"",
+      "name": "Priya K.",
+      "program": "Beginner Powerlifting",
+      "result": "Successfully completed her first sanctioned powerlifting meet"
     },
     {
-      "img": "img/testimonials/04.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
-    },
-    {
-      "img": "img/testimonials/05.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
-    },
-    {
-      "img": "img/testimonials/06.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "img": "/img/swc/testimonials/client-04.jpg",
+      "text": "\"Six weeks in and I'm stronger, more consistent, and finally understand how to train for myself.\"",
+      "name": "Derek A.",
+      "program": "Six Week Strength Transformation",
+      "result": "Lost 8 lbs of body fat while increasing total strength"
     }
   ],
-  "Team": [
+  "FAQ": [
     {
-      "img": "img/team/01.jpg",
-      "name": "John Doe",
-      "job": "Director"
+      "question": "Do I need gym experience?",
+      "answer": "Not at all. Most clients start as complete beginners. Every program begins with an assessment so coaching meets you exactly where you are."
     },
     {
-      "img": "img/team/02.jpg",
-      "name": "Mike Doe",
-      "job": "Senior Designer"
+      "question": "Am I too old to start strength training?",
+      "answer": "No. Strength training is safe and highly beneficial at any age when programmed correctly. Coaching is adapted to your body and goals, not a one-size-fits-all plan."
     },
     {
-      "img": "img/team/03.jpg",
-      "name": "Jane Doe",
-      "job": "Senior Designer"
+      "question": "Can you help with weight loss?",
+      "answer": "Yes. Strength training combined with habit and nutrition coaching supports sustainable fat loss alongside building strength."
     },
     {
-      "img": "img/team/04.jpg",
-      "name": "Karen Doe",
-      "job": "Project Manager"
+      "question": "Do I need special equipment?",
+      "answer": "No special equipment is required to get started. We'll work with whatever gym or home setup you have access to."
+    },
+    {
+      "question": "How often should I train?",
+      "answer": "Most programs are built around 2-3 sessions per week, balanced with your schedule and recovery needs."
+    },
+    {
+      "question": "Do you coach online?",
+      "answer": "Yes, online coaching is available in addition to in-person coaching in Prince Edward Island."
     }
   ],
+  "FinalCTA": {
+    "headline": "Ready to Become Stronger?",
+    "text": "Book your free consultation today and start building strength with confidence.",
+    "ctaLabel": "Book Free Consultation",
+    "ctaHref": "#contact"
+  },
   "Contact": {
     "address": "17 Heatherway Dr., Cornwall, PE C0A 1H3",
     "phone": "+1 902 394 7518",
@@ -182,58 +277,23 @@
       ]
     }
   },
-  "Features": [
-    {
-      "icon": "fa-solid fa-layer-group",
-      "title": "End-to-End Expertise",
-      "text": "From hardware setup to cloud software to AI — we handle every layer of your technology stack so you never have to juggle multiple vendors."
-    },
-    {
-      "icon": "fa-solid fa-handshake",
-      "title": "Long-Term Partnership",
-      "text": "We don't disappear after launch. We invest in your growth, evolving your technology as your business scales."
-    },
-    {
-      "icon": "fa-solid fa-robot",
-      "title": "Automation-First Mindset",
-      "text": "We look for every opportunity to automate repetitive work — freeing your team to focus on what only humans can do."
-    },
-    {
-      "icon": "fa-solid fa-comments",
-      "title": "Human-Centered Approach",
-      "text": "No jargon, no confusion. We translate complex technology into plain language strategies you can actually understand and act on."
-    }
-  ],
   "Products": [
     {
       "id": "1",
-      "name": "Revā by Hair Haven",
-      "sku": "111",
-      "description": "Locks in moisture, nourishes scalp, and protects edges & parts",
-      "icon": "fa-bottle-droplet",
-      "price": 25,
-      "image": {
-        "src": "../img/reva/product_img.webp",
-        "alt": "Reva product container",
-        "height": "250",
-        "width": "250"
-      },
-      "action": "feedback",
-      "feedbackLink": "https://forms.gle/cvmLkWT2ybYYdcCU6"
+      "sku": "SWC-DEPOSIT",
+      "name": "Coaching Program Deposit",
+      "description": "Placeholder product exercising the future checkout flow — replace with a real bookable/purchasable offer.",
+      "icon": "fa-solid fa-dumbbell",
+      "price": 50,
+      "action": "cart"
     },
     {
       "id": "2",
-      "name": "Kenoshea - Shea Butter",
-      "sku": "112",
-      "description": "Deep skin moisturization and a great lasting smell",
-      "icon": "fa-wave-square",
-      "price": 25,
-      "image": {
-        "src": "../img/reva/kenoshea_1.png",
-        "alt": "Kenoshea shea butter container",
-        "height": "200",
-        "width": "250"
-      },
+      "sku": "SWC-SAMPLE-PLAN",
+      "name": "Sample Program PDF",
+      "description": "Placeholder digital product exercising the future checkout flow — replace with a real downloadable offer.",
+      "icon": "fa-solid fa-file-lines",
+      "price": 0,
       "action": "coming_soon"
     }
   ]

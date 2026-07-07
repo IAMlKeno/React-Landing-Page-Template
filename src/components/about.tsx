@@ -10,20 +10,20 @@ export const About = ({ data }: Props) => (
       <div className="ai-about-img-wrap">
         <div className="ai-about-img-box">
           <img
-            src="img/avanti/avanti_header.png"
-            alt="Avanti Insieme Consulting team"
+            src={data?.image?.src ?? "/img/swc/coach-portrait.jpg"}
+            alt={data?.image?.alt ?? "Coach coaching a client through a squat"}
             loading="lazy"
           />
         </div>
         <div className="ai-stat-badge" aria-hidden="true">
-          <div className="ai-stat-num">1</div>
-          <div className="ai-stat-text">partner for your whole stack</div>
+          <div className="ai-stat-num">PEI</div>
+          <div className="ai-stat-text">strength coaching, built around you</div>
         </div>
       </div>
 
       <div className="ai-about-content">
-        <span className="ai-section-label">About Us</span>
-        <h2>{data?.whyHeader ?? "Why Choose Avanti Insieme?"}</h2>
+        <span className="ai-section-label">About the Coach</span>
+        <h2>{data?.whyHeader ?? "Why Train With Me"}</h2>
         <p className="about-paragraph">{data?.paragraph ?? ""}</p>
         {data?.listOfWhys && (
           <ul className="ai-benefits-list">

@@ -1,11 +1,16 @@
-import React, { useState } from "react";
-import { getAllProducts, Product } from "../domain/Product";
+import React, { useEffect, useState } from "react";
+import { Product } from "../domain/Product";
+import { productService } from "../domain/ProductService";
 import { useClassCart } from "../context/CartClassProvider";
 
 export default function ProductList() {
   const [showSku, setShowSku] = useState<boolean>(false);
-  const [productList] = useState<Product[]>(getAllProducts());
+  const [productList, setProductList] = useState<Product[]>([]);
   const { cart, dispatch } = useClassCart();
+
+  useEffect(() => {
+    productService.getProducts().then(setProductList);
+  }, []);
 
   const iconStyle = {
     fontSize: "38px",

@@ -1,5 +1,3 @@
-import JsonData from "../../../data/data.json";
-
 export interface Product {
   id: string;
   name: string;
@@ -8,9 +6,4 @@ export interface Product {
   isReservedPerDuration?: boolean;
   pricePerDuration?: number;
   [key: string]: any;
-}
-
-export function getAllProducts(): Product[] {
-  const data: Product[] = JsonData.Products;
-  return data;
 }
