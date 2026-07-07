@@ -45,7 +45,7 @@ export const Programs = ({ data }: Props) => (
                 </ul>
                 <div className="ai-program-footer">
                   <span className="ai-program-price">Starting at ${program.startingPrice}</span>
-                  <CTA href="#contact" label={program.ctaLabel} variant="primary" />
+                  <CTA href="https://calendly.com/elkenojones/30min" label={program.ctaLabel} variant="primary" />
                 </div>
               </div>
             ))

@@ -10,7 +10,7 @@ interface Props {
 export const Header = ({ data, stats }: Props) => {
   const bgStyle = data?.hero?.image
     ? {
-        background: `linear-gradient(rgba(17,37,65,0.72), rgba(17,37,65,0.84)), url(${data.hero.image}) center/cover no-repeat`,
+        background: `linear-gradient(rgba(17,37,65,0.8), rgba(17,37,65,0.9)), url(${data.hero.image}) center/cover no-repeat`,
       }
     : { background: "rgba(17,37,65,0.9)" };
 
@@ -30,9 +30,10 @@ export const Header = ({ data, stats }: Props) => {
             </h1>
             <p>{data ? data.paragraph : ""}</p>
             <div className="ai-hero-btns">
-              <CTA href="#contact" label="Book Free Consultation" variant="primary" />
+              <CTA href="#contact" label="Start Your Strength Journey" variant="primary" />
               <CTA href="#programs" label="View Programs" variant="secondary" />
             </div>
+            <p><small><strong>Free 20-minute consultation • No obligation</strong></small></p>
           </div>
         </div>
       </div>

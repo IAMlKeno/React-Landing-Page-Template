@@ -36,7 +36,7 @@ export const Navigation = () => {
                 {item.label}
               </a>
             ))}
-            <a href="#contact" className="ai-nav-cta">Get a Free Consult</a>
+            <a href="#contact" className="ai-nav-cta">Start Your Strength Journey</a>
           </div>
         )}
 
@@ -61,7 +61,7 @@ export const Navigation = () => {
             </a>
           ))}
           <a href="#contact" className="ai-mobile-cta" onClick={closeMenu}>
-            Get a Free Consult
+            Start Your Strength Journey
           </a>
         </div>
       )}

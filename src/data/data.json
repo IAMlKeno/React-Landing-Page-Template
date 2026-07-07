@@ -82,7 +82,7 @@
         "Progress tracking"
       ],
       "startingPrice": 349,
-      "ctaLabel": "Book Free Consultation"
+      "ctaLabel": "Start Squatting Today"
     },
     {
       "id": "bench-with-confidence",
@@ -100,7 +100,7 @@
         "Video review"
       ],
       "startingPrice": 349,
-      "ctaLabel": "Book Free Consultation"
+      "ctaLabel": "Build Your Bench"
     },
     {
       "id": "beginner-powerlifting",
@@ -118,7 +118,7 @@
         "Nutrition guidance"
       ],
       "startingPrice": 549,
-      "ctaLabel": "Book Free Consultation"
+      "ctaLabel": "Start Your Powerlifting Journey"
     },
     {
       "id": "strength-for-busy-professionals",
@@ -136,7 +136,7 @@
         "Monthly progress review"
       ],
       "startingPrice": 349,
-      "ctaLabel": "Book Free Consultation"
+      "ctaLabel": "Build My Plan"
     },
     {
       "id": "six-week-strength-transformation",
@@ -157,7 +157,7 @@
       ],
       "startingPrice": 649,
       "featured": true,
-      "ctaLabel": "Book Free Consultation"
+      "ctaLabel": "Apply for Transformation"
     }
   ],
   "CoachingProcess": [
