@@ -17,9 +17,12 @@ export const Testimonials = ({ data }: Props) => (
           ? data.map((t, i) => (
               <div key={`${t.name}-${i}`} className="ai-testimonial-card">
                 <div className="ai-testimonial-header">
-                  <img className="ai-testimonial-img" src={t.img} alt="" loading="lazy" />
+                  {/* {t?.img
+                    ? <img className="ai-testimonial-img" src={t.img} alt="" loading="lazy" /> */}
+                    <i className="fa fa-solod fa-person ai-testimonial-img"></i>
+                  {/* } */}
                   <div>
-                    <div className="ai-testimonial-name">{t.name}</div>
+                    <div className="ai-testimonial-name">{t.name ? t.name : 'Anonymous'}</div>
                     <div className="ai-testimonial-program">{t.program}</div>
                   </div>
                 </div>

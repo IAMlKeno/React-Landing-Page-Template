@@ -890,6 +890,8 @@ a:focus-visible {
   object-fit: cover;
   flex: 0 0 52px;
   background: var(--color-light);
+  font-size: xx-large;
+  align-content: center;
 }
 .ai-testimonial-name {
   font-family: "Plus Jakarta Sans", sans-serif;

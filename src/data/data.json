@@ -71,7 +71,7 @@
       "title": "Squat with Confidence",
       "description": "Master the squat with confidence and proper technique.",
       "audience": "Beginners and anyone who wants to squat safely and effectively",
-      "duration": "6 weeks",
+      "duration": "4 weeks",
       "features": [
         "Initial assessment",
         "Personalized squat program",
@@ -90,7 +90,7 @@
       "title": "Bench with Confidence",
       "description": "Improve your bench press safely while building upper-body strength.",
       "audience": "Anyone looking to build a safer, stronger bench press",
-      "duration": "6 weeks",
+      "duration": "4 weeks",
       "features": [
         "Shoulder assessment",
         "Bench technique coaching",
@@ -108,7 +108,7 @@
       "title": "Beginner Powerlifting",
       "description": "Learn the squat, bench and deadlift correctly.",
       "audience": "Beginners preparing for their first powerlifting meet",
-      "duration": "8 weeks",
+      "duration": "6 weeks",
       "features": [
         "Complete assessment",
         "Personalized programming",
@@ -129,13 +129,13 @@
       "duration": "Ongoing, monthly",
       "features": [
         "Three-day training program",
-        "45-minute workouts",
+        "30-45 minute workouts",
         "Lifestyle coaching",
         "Habit building",
         "Recovery planning",
         "Monthly progress review"
       ],
-      "startingPrice": 349,
+      "startingPrice": 250,
       "ctaLabel": "Build My Plan"
     },
     {
@@ -201,31 +201,24 @@
   "Testimonials": [
     {
       "img": "/img/swc/testimonials/client-01.jpg",
-      "text": "\"I walked in nervous about barely knowing what a squat rack was. Six weeks later I was squatting with real confidence and proper form.\"",
-      "name": "Sarah M.",
+      "text": "\"The thought and time you put into planning the program really shows, and I felt genuinely supported throughout the month of sessions. You are great at what you do!\"",
+      "name": "",
       "program": "Squat with Confidence",
       "result": "Added 40 lbs to her squat and no longer feels intimidated at the gym"
     },
     {
       "img": "/img/swc/testimonials/client-02.jpg",
-      "text": "\"As a busy professional I never thought I'd stick to a training program. The 45-minute sessions made it actually possible.\"",
-      "name": "James T.",
-      "program": "Strength for Busy Professionals",
-      "result": "Trained consistently 3x/week for 3 months straight"
+      "text": "\"Squat with Confidence truly taught me the techniques to feel CONFIDENT in the squat. I was able to push way past my PR goal that I originally set while learning how to do so confidently in every step and movement.  \"",
+      "name": "Jeanné P.",
+      "program": "Squat with Confidence",
+      "result": "Added 20lbs to squat"
     },
     {
       "img": "/img/swc/testimonials/client-03.jpg",
-      "text": "\"My first powerlifting meet felt achievable because every lift was coached and tested well before competition day.\"",
-      "name": "Priya K.",
-      "program": "Beginner Powerlifting",
-      "result": "Successfully completed her first sanctioned powerlifting meet"
-    },
-    {
-      "img": "/img/swc/testimonials/client-04.jpg",
-      "text": "\"Six weeks in and I'm stronger, more consistent, and finally understand how to train for myself.\"",
-      "name": "Derek A.",
-      "program": "Six Week Strength Transformation",
-      "result": "Lost 8 lbs of body fat while increasing total strength"
+      "text": "\"After just 1 session, blew past my all time best on bench!\"",
+      "name": "Jeanné P.",
+      "program": "Bench with Confidence",
+      "result": "Improved confidence under the bar"
     }
   ],
   "FAQ": [
