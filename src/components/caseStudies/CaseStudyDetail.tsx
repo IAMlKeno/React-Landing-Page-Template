@@ -10,7 +10,6 @@ export const CaseStudyDetail = ({ study }: Props) => {
 
   const paragraphs = Array.isArray(study.body) ? study.body.join("\n\n") : study.body.split(/\n\n+/);
 
-  console.debug(paragraphs);
   return (
     <section id="cs-detail-section" className="ai-cs-detail" aria-labelledby="cs-detail-h">
       <div className="ai-cs-detail-content">
