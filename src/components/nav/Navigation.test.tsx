@@ -1,15 +1,10 @@
 import { screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import { renderWithProviders } from '../../test/utils';
 import { Navigation } from './navigation';
 
-// Navigation reads data.json directly and renders CartIcon (needs CartClassContext),
-// so we use renderWithProviders from src/test/utils.
-
 describe('Navigation', () => {
-  beforeEach(() => {
-    localStorage.clear();
-  });
-
   it('renders the nav element', () => {
     renderWithProviders(<Navigation />);
     expect(screen.getByRole('navigation')).toBeInTheDocument();
@@ -18,24 +13,34 @@ describe('Navigation', () => {
   it('renders the brand logo text', () => {
     renderWithProviders(<Navigation />);
     // Brand text comes from data.json Navigation.logo.value
-    expect(screen.getByText('Simple Cart')).toBeInTheDocument();
+    expect(screen.getByText('Avanti Insieme')).toBeInTheDocument();
   });
 
-  it('renders all navigation links from data', () => {
+  it('renders all navigation links from data, including Case Studies', () => {
     renderWithProviders(<Navigation />);
-    expect(screen.getByRole('link', { name: /features/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /about/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /services/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /gallery/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /testimonials/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /team/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /about/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /case studies/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /contact/i })).toBeInTheDocument();
   });
 
-  it('renders the cart icon button', () => {
+  it('links "Case Studies" to the /case-studies route', () => {
     renderWithProviders(<Navigation />);
-    // Two CartIcon instances exist: one in navbar-header (mobile), one in collapse (desktop)
-    const cartButtons = screen.getAllByRole('button');
-    expect(cartButtons.length).toBeGreaterThanOrEqual(2);
+    expect(screen.getByRole('link', { name: /case studies/i })).toHaveAttribute(
+      'href',
+      '/case-studies'
+    );
+  });
+
+  it('marks "Case Studies" as the active nav item when on /case-studies', () => {
+    render(
+      <MemoryRouter initialEntries={['/case-studies']}>
+        <Navigation />
+      </MemoryRouter>
+    );
+    expect(screen.getByRole('link', { name: /case studies/i })).toHaveAttribute(
+      'aria-current',
+      'page'
+    );
   });
 });

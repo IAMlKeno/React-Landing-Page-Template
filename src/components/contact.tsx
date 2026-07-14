@@ -1,6 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import emailjs from "@emailjs/browser";
-import type { ContactData, SocialLinks } from "../types";
+import type { ContactData, LandingPageData } from "../types";
+import { Footer } from "./footer";
+import JsonData from "../data/data.json";
 
 interface Props {
   data?: ContactData;
@@ -19,10 +22,25 @@ const emailjsConfig = {
   publicKey: import.meta.env.VITE_EMAILJS_PUB_KEY,
 };
 
+const caseStudies = (JsonData as LandingPageData).CaseStudies;
+
 export const Contact = ({ data }: Props) => {
   const contactForm = useRef(null);
   const [{ name, email, message }, setState] = useState<FormState>(initialState);
   const [statusMsg, setStatusMsg] = useState("");
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const projectSlug = searchParams.get("project");
+    if (!projectSlug) return;
+    const study = caseStudies.find((cs) => cs.slug === projectSlug);
+    if (!study) return;
+    setState((prev) => ({
+      ...prev,
+      message: `Hi, I came across your case study "${study.title}" (${study.tag}) and I'm interested in discussing a similar project for my business.`,
+    }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -153,26 +171,7 @@ export const Contact = ({ data }: Props) => {
         </div>
       </div>
 
-      <footer id="footer">
-        <div className="ai-footer-inner">
-          <p>&copy; 2026 Avanti Insieme Consulting. All rights reserved.</p>
-          {data?.social && (
-            <div className="ai-social-links">
-              {data.social.links.map((social: SocialLinks, idx: number) => (
-                <a
-                  key={social.link + "_" + idx}
-                  href={social.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.icon.replace("fa-", "")}
-                >
-                  <i className={`fa-brands ${social.icon}`} aria-hidden="true" />
-                </a>
-              ))}
-            </div>
-          )}
-        </div>
-      </footer>
+      <Footer data={data?.social} />
     </>
   );
 };

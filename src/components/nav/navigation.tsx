@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import JsonData from "../../data/data.json";
 import { NavigationData, NavigationItemsData } from "../../types";
 
@@ -6,6 +7,7 @@ export const Navigation = () => {
   const data: NavigationData = JsonData.Navigation;
   const [isMobile, setIsMobile] = useState(() => window.innerWidth < 860);
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 859.98px)");
@@ -18,25 +20,39 @@ export const Navigation = () => {
   }, []);
 
   const closeMenu = () => setMenuOpen(false);
+  const isRoute = (href: string) => href.startsWith("/");
+  const isActive = (href: string) => isRoute(href) && location.pathname === href;
+  const contactHref = location.pathname === "/" ? "#contact" : "/#contact";
 
   return (
     <header id="ai-header" aria-label="Site header">
       <nav className="ai-nav" aria-label="Primary">
-        <a href="#page-top" className="ai-logo" onClick={closeMenu}>
+        <Link to="/" className="ai-logo" onClick={closeMenu}>
           <span className="ai-logo-badge" aria-hidden="true">
             <img src="/img/avanti/avanti_logo_square_nobg.png" width={30}/>
           </span>
           <span className="ai-logo-text">{data.logo.value}</span>
-        </a>
+        </Link>
 
         {!isMobile && (
           <div className="ai-nav-desktop">
-            {data.items.map((item: NavigationItemsData) => (
-              <a key={item.href} href={item.href} className="ai-nav-link">
-                {item.label}
-              </a>
-            ))}
-            <a href="#contact" className="ai-nav-cta">Get a Free Consult</a>
+            {data.items.map((item: NavigationItemsData) =>
+              isRoute(item.href) ? (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className={`ai-nav-link${isActive(item.href) ? " is-active" : ""}`}
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a key={item.href} href={item.href} className="ai-nav-link">
+                  {item.label}
+                </a>
+              )
+            )}
+            <a href={contactHref} className="ai-nav-cta">Get a Free Consult</a>
           </div>
         )}
 
@@ -55,12 +71,24 @@ export const Navigation = () => {
 
       {isMobile && menuOpen && (
         <div id="ai-mobile-menu" className="ai-mobile-panel">
-          {data.items.map((item: NavigationItemsData) => (
-            <a key={item.href} href={item.href} onClick={closeMenu}>
-              {item.label}
-            </a>
-          ))}
-          <a href="#contact" className="ai-mobile-cta" onClick={closeMenu}>
+          {data.items.map((item: NavigationItemsData) =>
+            isRoute(item.href) ? (
+              <Link
+                key={item.href}
+                to={item.href}
+                className={isActive(item.href) ? "is-active" : undefined}
+                aria-current={isActive(item.href) ? "page" : undefined}
+                onClick={closeMenu}
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <a key={item.href} href={item.href} onClick={closeMenu}>
+                {item.label}
+              </a>
+            )
+          )}
+          <a href={contactHref} className="ai-mobile-cta" onClick={closeMenu}>
             Get a Free Consult
           </a>
         </div>
