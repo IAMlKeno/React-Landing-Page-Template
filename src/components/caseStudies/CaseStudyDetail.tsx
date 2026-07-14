@@ -1,3 +1,4 @@
+import Markdown from "react-markdown";
 import type { CaseStudy } from "../../types";
 
 interface Props {
@@ -7,8 +8,9 @@ interface Props {
 export const CaseStudyDetail = ({ study }: Props) => {
   if (!study) return null;
 
-  const paragraphs = study.body.split(/\n\n+/);
+  const paragraphs = Array.isArray(study.body) ? study.body.join("\n\n") : study.body.split(/\n\n+/);
 
+  console.debug(paragraphs);
   return (
     <section id="cs-detail-section" className="ai-cs-detail" aria-labelledby="cs-detail-h">
       <div className="ai-cs-detail-content">
@@ -16,9 +18,12 @@ export const CaseStudyDetail = ({ study }: Props) => {
         <h2 id="cs-detail-h">{study.title}</h2>
         <p className="ai-cs-detail-client">{study.client}</p>
         <div className="ai-cs-detail-body">
-          {paragraphs.map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
+          {typeof paragraphs == "string"
+            ? <Markdown>{paragraphs}</Markdown>
+            : paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              )
+          )}
         </div>
         <div className="ai-cs-results">
           {study.results.map((r, i) => (

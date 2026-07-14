@@ -1339,3 +1339,8 @@ a:focus-visible {
   display: flex;
   align-items: center;
 }
+
+.ai-cs-detail-body ul,
+.ai-cs-detail-body li {
+  list-style-type: disc;
+}

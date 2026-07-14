@@ -185,120 +185,137 @@
   },
   "CaseStudies": [
     {
-      "id": "cs1",
-      "slug": "coastal-ridge-dental-group",
-      "tag": "Web Development",
-      "client": "Coastal Ridge Dental Group",
-      "title": "Rebuilding a 12-Location Dental Practice's Web Presence",
-      "body": "Coastal Ridge Dental Group had grown to twelve locations, but their website was still a single static page built in 2014. Patients couldn't book appointments online, location information was buried in PDFs, and the site failed basic accessibility checks. Avanti Insieme rebuilt the entire site from the ground up: a location-aware architecture, integrated online booking, and a content system the front-desk staff could update themselves. We ran the new build through full WCAG 2.1 AA testing before launch. Within the first quarter, online booking accounted for nearly a third of all new appointments, and the practice's search visibility improved dramatically as pages became indexable by location.",
-      "results": [
-        { "stat": "31%", "label": "of new bookings now online" },
-        { "stat": "2.3s", "label": "average page load, down from 8.1s" },
-        { "stat": "12", "label": "locations unified under one platform" }
-      ]
-    },
-    {
-      "id": "cs2",
-      "slug": "northfield-outdoor-supply",
+      "id": "isp-1",
+      "slug": "isp-transform-event-management",
       "tag": "eCommerce",
-      "client": "Northfield Outdoor Supply",
-      "title": "Turning a Storefront-Only Retailer Into an Omnichannel Seller",
-      "body": "Northfield Outdoor Supply had two decades of loyal in-store customers but no way to sell online. We configured and customized an eCommerce platform around their existing inventory system, avoiding the double-entry chaos that sinks most retail launches. Custom product filtering for gear specs (weight, capacity, weather rating) was critical — off-the-shelf filtering wasn't built for outdoor equipment. We also built a click-and-collect flow so in-store staff could fulfill online orders during slow hours. The store launched three weeks ahead of the target hiking season, and shipping delays that plagued their previous DIY attempt disappeared entirely.",
+      "client": "Island Strength and Power",
+      "title": "Transforming Event Management for Island Strength & Power",
+      "body": [
+        "**Industry:** Sports & Recreation | Non-Profit Organization | eCommerce & Event Management",
+
+"## Client Overview",
+"**Island Strength & Power (ISP)** is a Prince Edward Island-based non-profit organization dedicated to growing the sports of Strongman and Powerlifting. As the provincial affiliate of Strongman Canada Corporation (SCC) and World Raw Powerlifting Federation (WRPF) Canada, ISP hosts competitions, promotes athlete development, and provides opportunities for strength athletes across the Island.",
+
+"As the organization continued to gain recognition and attract more competitors, the administrative processes that once worked well began to limit its growth.",
+
+"---",
+
+"## The Challenge",
+
+"Like many growing organizations, Island Strength & Power started with simple, low-cost tools to manage event registrations. Athletes completed Google Forms while registration fees were collected separately through Interac e-Transfer.",
+
+"Although this process was sufficient in the early stages, it quickly became inefficient as participation increased.",
+
+"The organizing team faced several recurring challenges:",
+
+"* Matching e-Transfer payments with submitted registration forms",
+"* Following up with athletes who had registered but not yet paid",
+"* Manually tracking registrations in spreadsheets",
+"* Spending valuable volunteer time on administrative work instead of event planning",
+"* Providing athletes with a registration experience that reflected the professionalism of the organization",
+
+"The registration process had become fragmented, creating unnecessary work for organizers while increasing the possibility of human error.",
+
+"Island Strength & Power needed a solution that could streamline administration today while supporting future growth.",
+
+"---",
+
+"## Our Solution",
+
+"Avanti Insieme designed and implemented a modern, scalable website that serves as both a marketing platform and a centralized event management system.",
+
+"Rather than creating a simple informational website, we developed a custom Content Management System (CMS) integrated directly with Stripe for secure online payments.",
+
+"The new platform allows the ISP team to manage events from one centralized location while providing athletes with a seamless registration experience.",
+
+"### Key Features Delivered",
+
+"* Event creation and management through an easy-to-use administrative dashboard",
+"* Online athlete registration",
+"* Secure payment processing using Stripe",
+"* Automated collection of registration information",
+"* Exportable participant spreadsheets for event planning and weigh-ins",
+"* Centralized management of registrations and payments",
+"* Mobile-friendly website accessible on any device",
+
+"Because the solution was built with scalability in mind, the platform can continue evolving alongside the organization as its needs change.",
+
+"---",
+
+"## The Results",
+
+"The impact of the new platform extended beyond simply replacing forms and e-transfers.",
+
+"Island Strength & Power now operates with a streamlined registration process that reduces administrative overhead while improving the experience for both organizers and athletes.",
+
+"Some of the immediate improvements include:",
+
+"* A single location where athletes can discover events, register, and pay online",
+"* Elimination of manual payment reconciliation between forms and e-Transfers",
+"* Faster access to accurate participant information",
+"* Improved professionalism and credibility through a dedicated online presence",
+"* Reduced administrative workload for volunteers and event organizers",
+
+"Instead of spending hours matching payments and maintaining spreadsheets, organizers can now focus on delivering exceptional competitions and growing the strength community across Prince Edward Island.",
+
+"---",
+
+"## Measuring Success",
+
+"While every project has unique objectives, several indicators demonstrate the success of this implementation.",
+
+"### Improved User Experience",
+
+"Athletes now have one clear destination for event information and registration, eliminating confusion about where to sign up.",
+
+"### Streamlined Administration",
+
+"Registration and payment information are collected in one integrated system, significantly reducing manual administrative work.",
+
+"### Increased Online Visibility",
+
+"The new website provides Island Strength & Power with a professional digital presence that makes it easier for athletes, sponsors, and prospective members to discover the organization.",
+
+"### Foundation for Growth",
+
+"Perhaps the greatest success is that the platform is no longer just a website—it has become the operational foundation upon which future services can be built.",
+
+"---",
+
+"## Looking Ahead",
+
+"One of Avanti Insieme's guiding principles is building solutions that continue creating value long after launch.",
+
+"The Island Strength & Power platform was intentionally designed to support future expansion without requiring a complete rebuild.",
+
+"Planned enhancements include:",
+
+"* A refreshed user interface with an even stronger focus on usability and search engine optimization (SEO)",
+"* Expanded eCommerce capabilities to sell branded merchandise directly through the website",
+"* Online coaching and training programs with secure digital purchases",
+"* Athlete profiles and performance history maintained directly within the platform",
+"* Digital competition records and rankings to replace external spreadsheets",
+"* Additional automation tools to further simplify event administration",
+
+"These enhancements will allow Island Strength & Power to increase revenue opportunities while continuing to improve the experience for athletes and volunteers alike.",
+
+"---",
+
+"## Conclusion",
+
+"Technology should simplify operations—not create more work.",
+
+"By replacing disconnected tools with an integrated event management platform, Avanti Insieme helped Island Strength & Power transition from manual administration to a scalable digital solution built for long-term growth.",
+
+"Today, the organization has a professional online presence, a streamlined registration process, secure online payments, and a platform capable of supporting future expansion.",
+
+"Whether it's managing competitions, generating new revenue streams, or improving the athlete experience, the website has become a valuable asset that grows alongside the organization.",
+
+"At Avanti Insieme, we believe the best software doesn't just solve today's problems—it creates opportunities for tomorrow."
+      ],
       "results": [
-        { "stat": "$186K", "label": "online revenue in first 6 months" },
-        { "stat": "0", "label": "inventory sync errors post-launch" },
-        { "stat": "3 wks", "label": "ahead of peak-season deadline" }
-      ]
-    },
-    {
-      "id": "cs3",
-      "slug": "union-street-law-partners",
-      "tag": "Hardware Installation",
-      "client": "Union Street Law Partners",
-      "title": "Modernizing a Law Firm's Conference Rooms and Workstations",
-      "body": "Union Street Law Partners was running client meetings off a decade-old projector and laptops that took minutes to wake from sleep. We handled a full hardware refresh: new workstations for all associates, wall-mounted displays and conferencing systems in three meeting rooms, and a structured cabling cleanup that had been ignored since the office's last renovation. Every device was configured, security-hardened, and tested against the firm's existing case management software before we called the job done. The firm's IT-related support tickets dropped to nearly zero in the following months, and meeting setup time went from a scramble to a non-event.",
-      "results": [
-        { "stat": "92%", "label": "fewer hardware support tickets" },
-        { "stat": "3", "label": "conference rooms upgraded" },
-        { "stat": "48", "label": "workstations deployed" }
-      ]
-    },
-    {
-      "id": "cs4",
-      "slug": "harbor-arts-collective",
-      "tag": "CMS",
-      "client": "Harbor Arts Collective",
-      "title": "Giving a Nonprofit Control Over Its Own Content",
-      "body": "Harbor Arts Collective relied on a volunteer web developer who had since moved on, leaving them unable to update event listings or artist profiles without hiring outside help for every small change. We installed and customized a content management system tailored to their actual workflow — event submissions, artist bios, and a donation page that didn't look bolted-on. Staff training took a single afternoon. Since launch, the Collective's small staff has published over 80 events and updates entirely on their own, with zero developer intervention required.",
-      "results": [
-        { "stat": "80+", "label": "self-published updates since launch" },
-        { "stat": "$0", "label": "in follow-up developer costs" },
-        { "stat": "1", "label": "afternoon of staff training needed" }
-      ]
-    },
-    {
-      "id": "cs5",
-      "slug": "ferro-metalworks",
-      "tag": "CRM",
-      "client": "Ferro Metalworks",
-      "title": "Replacing Sticky Notes and Spreadsheets With a Real CRM",
-      "body": "Ferro Metalworks' sales process lived across a shared spreadsheet, a few sticky notes, and whatever the sales lead remembered from the last call. Leads fell through constantly. We designed and deployed a CRM configured around their actual quoting and fabrication timeline, with automated follow-up reminders and a pipeline view the whole team could see at once. The rollout included migrating three years of historical customer data so nothing was lost in the transition. Sales follow-up time dropped from an average of eleven days to under two, and the team recovered several previously-lost accounts in the first month alone.",
-      "results": [
-        { "stat": "82%", "label": "faster average follow-up time" },
-        { "stat": "3 yrs", "label": "of customer history migrated" },
-        { "stat": "6", "label": "recovered accounts in month one" }
-      ]
-    },
-    {
-      "id": "cs6",
-      "slug": "bellwood-property-management",
-      "tag": "AI Solutions",
-      "client": "Bellwood Property Management",
-      "title": "Automating Tenant Support With a Purpose-Built Chatbot",
-      "body": "Bellwood Property Management's leasing office fielded the same maintenance and lease-renewal questions dozens of times a day, leaving little time for anything else. We implemented a chatbot trained specifically on their lease documents, maintenance procedures, and building-specific FAQs — not a generic bot bolted onto their site. It handles routine tenant questions instantly and routes anything genuinely complex to a human, with a clear handoff so no tenant feels stuck talking to a machine. Within two months, routine inquiry volume to the leasing office had dropped by more than half.",
-      "results": [
-        { "stat": "58%", "label": "drop in routine inquiry volume" },
-        { "stat": "24/7", "label": "tenant question coverage" },
-        { "stat": "2 mo", "label": "to measurable impact" }
-      ]
-    },
-    {
-      "id": "cs7",
-      "slug": "ashgrove-veterinary-clinic",
-      "tag": "Web Development",
-      "client": "Ashgrove Veterinary Clinic",
-      "title": "From Broken Mobile Site to Same-Day Appointment Requests",
-      "body": "Ashgrove Veterinary Clinic's existing site was unreadable on mobile, and over 70% of their traffic was mobile. We rebuilt the site mobile-first, restructured the information so urgent-care contact details were never more than one tap away, and added a same-day appointment request form that fed directly into the clinic's scheduling inbox. We also cleaned up years of orphaned blog content that was actively hurting their search rankings. Mobile bounce rate dropped sharply within the first month, and the clinic began receiving same-day requests they simply hadn't been able to capture before.",
-      "results": [
-        { "stat": "47%", "label": "lower mobile bounce rate" },
-        { "stat": "70%+", "label": "of traffic now converts on mobile" },
-        { "stat": "4x", "label": "increase in same-day requests" }
-      ]
-    },
-    {
-      "id": "cs8",
-      "slug": "meridian-community-theater",
-      "tag": "Hardware Installation",
-      "client": "Meridian Community Theater",
-      "title": "Outfitting a Community Theater With Modern AV",
-      "body": "Meridian Community Theater was running productions on mismatched, aging sound equipment held together with patience and duct tape. We designed and installed a full audio-visual system: a new mixing console, stage monitors, wireless mic systems, and a projection setup for multimedia productions — all specified around the venue's actual acoustics rather than a generic package. Volunteer stage crew were trained on the new systems ahead of the season opener. The theater's next three productions ran without a single audio dropout, a first in the venue's recent history.",
-      "results": [
-        { "stat": "0", "label": "audio failures across 3 productions" },
-        { "stat": "1", "label": "unified AV system replacing 4 legacy setups" },
-        { "stat": "100%", "label": "volunteer crew trained pre-launch" }
-      ]
-    },
-    {
-      "id": "cs9",
-      "slug": "ridgeline-coffee-roasters",
-      "tag": "eCommerce",
-      "client": "Ridgeline Coffee Roasters",
-      "title": "Scaling a Subscription Coffee Business Beyond Spreadsheets",
-      "body": "Ridgeline Coffee Roasters had a loyal subscriber base but was managing recurring orders manually through a spreadsheet and manual charge runs — a process that was starting to break as they grew. We built out a proper subscription commerce flow: flexible delivery cadences, self-serve plan management for customers, and automated billing that didn't require anyone at Ridgeline to remember to run charges. We also integrated real-time roast-batch inventory so subscribers were never sent a listing that was actually out of stock. The switch eliminated billing errors entirely and freed up roughly ten hours a week previously spent on manual order management.",
-      "results": [
-        { "stat": "10 hrs/wk", "label": "of manual work eliminated" },
-        { "stat": "0", "label": "billing errors since migration" },
-        { "stat": "34%", "label": "growth in active subscribers" }
+        { "stat": "0", "label": "customers asking for a google link" },
+        { "stat": "100%", "label": "improved internet visibility" }
       ]
     }
   ],

@@ -78,7 +78,7 @@ export interface CaseStudy {
   tag: string;
   client: string;
   title: string;
-  body: string;
+  body: string | string[];
   results: CaseStudyResult[];
 }
 
