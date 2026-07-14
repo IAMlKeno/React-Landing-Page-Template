@@ -67,6 +67,21 @@ export interface SocialLinks {
   icon: string;
 }
 
+export interface CaseStudyResult {
+  stat: string;
+  label: string;
+}
+
+export interface CaseStudy {
+  id: string;
+  slug: string;
+  tag: string;
+  client: string;
+  title: string;
+  body: string | string[];
+  results: CaseStudyResult[];
+}
+
 export interface LandingPageData {
   SEO?: any;
   Header: HeaderData;
@@ -77,4 +92,5 @@ export interface LandingPageData {
   Testimonials: TestimonialItem[];
   Team: TeamMember[];
   Contact: ContactData;
+  CaseStudies: CaseStudy[];
 }

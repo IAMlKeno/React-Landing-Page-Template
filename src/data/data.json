@@ -15,6 +15,7 @@
     "items": [
       { "href": "#services", "className": ["page-scroll", "menu-item"], "label": "Services" },
       { "href": "#about", "className": ["page-scroll"], "label": "About" },
+      { "href": "/case-studies", "className": ["page-scroll"], "label": "Case Studies" },
       { "href": "#contact", "className": ["page-scroll"], "label": "Contact" }
     ],
     "logo": {
@@ -81,32 +82,32 @@
   ],
   "Services": [
     {
-      "icon": "fa fa-code",
+      "icon": "fa-solid fa-code",
       "name": "Website Development & Modernization",
       "text": "From ground-up builds to full redesigns, we craft fast, accessible, and conversion-focused websites that reflect your brand and work flawlessly across every device."
     },
     {
-      "icon": "fa fa-cart-arrow-down",
+      "icon": "fa-solid fa-cart-shopping",
       "name": "eCommerce Customization",
       "text": "Sell more with a storefront built around your customers. We configure, extend, and customize eCommerce platforms so your products reach buyers with zero friction."
     },
     {
-      "icon": "fa fa-desktop",
+      "icon": "fa-solid fa-desktop",
       "name": "Hardware Installation",
       "text": "Computers, monitors, televisions, sound systems, and more — professionally installed, configured, and tested so your team hits the ground running from day one."
     },
     {
-      "icon": "fa fab fa-wordpress",
+      "icon": "fa-brands fa-wordpress",
       "name": "CMS Installation & Customization",
       "text": "Whether it's WordPress, Drupal, or another platform, we tailor your Content Management System to fit your workflow so publishing content is effortless."
     },
     {
-      "icon": "fa fa-users-rectangle",
+      "icon": "fa-solid fa-users",
       "name": "Customer Relationship Management",
       "text": "Stop managing leads with sticky notes. We design and deploy CRMs that centralize your customer data, automate follow-ups, and help you close more business."
     },
     {
-      "icon": "fa fa-robot",
+      "icon": "fa-solid fa-robot",
       "name": "Artificial Intelligence Solutions",
       "text": "From intelligent chatbots to workflow automation and custom AI integrations, we implement practical AI that saves time, reduces errors, and scales with you."
     }
@@ -182,24 +183,160 @@
       ]
     }
   },
+  "CaseStudies": [
+    {
+      "id": "isp-1",
+      "slug": "isp-transform-event-management",
+      "tag": "eCommerce",
+      "client": "Island Strength and Power",
+      "title": "Transforming Event Management for Island Strength & Power",
+      "body": [
+        "**Industry:** Sports & Recreation | Non-Profit Organization | eCommerce & Event Management",
+
+"## Client Overview",
+"**Island Strength & Power (ISP)** is a Prince Edward Island-based non-profit organization dedicated to growing the sports of Strongman and Powerlifting. As the provincial affiliate of Strongman Canada Corporation (SCC) and World Raw Powerlifting Federation (WRPF) Canada, ISP hosts competitions, promotes athlete development, and provides opportunities for strength athletes across the Island.",
+
+"As the organization continued to gain recognition and attract more competitors, the administrative processes that once worked well began to limit its growth.",
+
+"---",
+
+"## The Challenge",
+
+"Like many growing organizations, Island Strength & Power started with simple, low-cost tools to manage event registrations. Athletes completed Google Forms while registration fees were collected separately through Interac e-Transfer.",
+
+"Although this process was sufficient in the early stages, it quickly became inefficient as participation increased.",
+
+"The organizing team faced several recurring challenges:",
+
+"* Matching e-Transfer payments with submitted registration forms",
+"* Following up with athletes who had registered but not yet paid",
+"* Manually tracking registrations in spreadsheets",
+"* Spending valuable volunteer time on administrative work instead of event planning",
+"* Providing athletes with a registration experience that reflected the professionalism of the organization",
+
+"The registration process had become fragmented, creating unnecessary work for organizers while increasing the possibility of human error.",
+
+"Island Strength & Power needed a solution that could streamline administration today while supporting future growth.",
+
+"---",
+
+"## Our Solution",
+
+"Avanti Insieme designed and implemented a modern, scalable website that serves as both a marketing platform and a centralized event management system.",
+
+"Rather than creating a simple informational website, we developed a custom Content Management System (CMS) integrated directly with Stripe for secure online payments.",
+
+"The new platform allows the ISP team to manage events from one centralized location while providing athletes with a seamless registration experience.",
+
+"### Key Features Delivered",
+
+"* Event creation and management through an easy-to-use administrative dashboard",
+"* Online athlete registration",
+"* Secure payment processing using Stripe",
+"* Automated collection of registration information",
+"* Exportable participant spreadsheets for event planning and weigh-ins",
+"* Centralized management of registrations and payments",
+"* Mobile-friendly website accessible on any device",
+
+"Because the solution was built with scalability in mind, the platform can continue evolving alongside the organization as its needs change.",
+
+"---",
+
+"## The Results",
+
+"The impact of the new platform extended beyond simply replacing forms and e-transfers.",
+
+"Island Strength & Power now operates with a streamlined registration process that reduces administrative overhead while improving the experience for both organizers and athletes.",
+
+"Some of the immediate improvements include:",
+
+"* A single location where athletes can discover events, register, and pay online",
+"* Elimination of manual payment reconciliation between forms and e-Transfers",
+"* Faster access to accurate participant information",
+"* Improved professionalism and credibility through a dedicated online presence",
+"* Reduced administrative workload for volunteers and event organizers",
+
+"Instead of spending hours matching payments and maintaining spreadsheets, organizers can now focus on delivering exceptional competitions and growing the strength community across Prince Edward Island.",
+
+"---",
+
+"## Measuring Success",
+
+"While every project has unique objectives, several indicators demonstrate the success of this implementation.",
+
+"### Improved User Experience",
+
+"Athletes now have one clear destination for event information and registration, eliminating confusion about where to sign up.",
+
+"### Streamlined Administration",
+
+"Registration and payment information are collected in one integrated system, significantly reducing manual administrative work.",
+
+"### Increased Online Visibility",
+
+"The new website provides Island Strength & Power with a professional digital presence that makes it easier for athletes, sponsors, and prospective members to discover the organization.",
+
+"### Foundation for Growth",
+
+"Perhaps the greatest success is that the platform is no longer just a website—it has become the operational foundation upon which future services can be built.",
+
+"---",
+
+"## Looking Ahead",
+
+"One of Avanti Insieme's guiding principles is building solutions that continue creating value long after launch.",
+
+"The Island Strength & Power platform was intentionally designed to support future expansion without requiring a complete rebuild.",
+
+"Planned enhancements include:",
+
+"* A refreshed user interface with an even stronger focus on usability and search engine optimization (SEO)",
+"* Expanded eCommerce capabilities to sell branded merchandise directly through the website",
+"* Online coaching and training programs with secure digital purchases",
+"* Athlete profiles and performance history maintained directly within the platform",
+"* Digital competition records and rankings to replace external spreadsheets",
+"* Additional automation tools to further simplify event administration",
+
+"These enhancements will allow Island Strength & Power to increase revenue opportunities while continuing to improve the experience for athletes and volunteers alike.",
+
+"---",
+
+"## Conclusion",
+
+"Technology should simplify operations—not create more work.",
+
+"By replacing disconnected tools with an integrated event management platform, Avanti Insieme helped Island Strength & Power transition from manual administration to a scalable digital solution built for long-term growth.",
+
+"Today, the organization has a professional online presence, a streamlined registration process, secure online payments, and a platform capable of supporting future expansion.",
+
+"Whether it's managing competitions, generating new revenue streams, or improving the athlete experience, the website has become a valuable asset that grows alongside the organization.",
+
+"At Avanti Insieme, we believe the best software doesn't just solve today's problems—it creates opportunities for tomorrow."
+      ],
+      "results": [
+        { "stat": "0", "label": "customers asking for a google link" },
+        { "stat": "100%", "label": "improved internet visibility" }
+      ]
+    }
+  ],
   "Features": [
     {
-      "icon": "fa fa-layer-group",
+      "icon": "fa-solid fa-layer-group",
       "title": "End-to-End Expertise",
       "text": "From hardware setup to cloud software to AI — we handle every layer of your technology stack so you never have to juggle multiple vendors."
     },
     {
-      "icon": "fa fa-handshake",
+      "icon": "fa-solid fa-handshake",
       "title": "Long-Term Partnership",
       "text": "We don't disappear after launch. We invest in your growth, evolving your technology as your business scales."
     },
     {
-      "icon": "fa fa-robot",
+      "icon": "fa-solid fa-robot",
       "title": "Automation-First Mindset",
       "text": "We look for every opportunity to automate repetitive work — freeing your team to focus on what only humans can do."
     },
     {
-      "icon": "fa fa-comments",
+      "icon": "fa-solid fa-comments",
       "title": "Human-Centered Approach",
       "text": "No jargon, no confusion. We translate complex technology into plain language strategies you can actually understand and act on."
     }

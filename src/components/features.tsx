@@ -1,30 +1,25 @@
-import React from "react";
 import type { FeatureItem } from "../types";
+import { CardGrid } from "./common/CardGrid";
+import { FeatureCard } from "./common/FeatureCard";
 
 interface Props {
   data?: FeatureItem[];
 }
 
-export const Features = ({ data }: Props) => {
-  return (
-    <div id="features" className="text-center">
-      <div className="container">
-        <div className="col-md-10 col-md-offset-1 section-title">
-          <h2>What Sets Us Apart</h2>
-        </div>
-        <div className="row">
-          {data
-            ? data.map((d, i) => (
-                <div key={`${d.title}-${i}`} className="col-xs-6 col-md-3">
-                  {" "}
-                  <i className={d.icon}></i>
-                  <h3>{d.title}</h3>
-                  <p>{d.text}</p>
-                </div>
-              ))
-            : "Loading..."}
-        </div>
+export const Features = ({ data }: Props) => (
+  <div id="features">
+    <div className="ai-features-container">
+      <div className="ai-features-header section-title">
+        <h2>What Sets Us Apart</h2>
+        <span className="ai-section-divider" aria-hidden="true" />
       </div>
+      <CardGrid minCardWidth="220px" gap="40px 28px">
+        {data
+          ? data.map((d, i) => (
+              <FeatureCard key={`${d.title}-${i}`} icon={d.icon} title={d.title} text={d.text} />
+            ))
+          : null}
+      </CardGrid>
     </div>
-  );
-};
+  </div>
+);

@@ -1,9 +1,12 @@
 import React from 'react';
 import { render, type RenderOptions } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import { CartClassProvider } from '../features/cart/context/CartClassProvider';
 
 const AllProviders = ({ children }: { children: React.ReactNode }) => (
-  <CartClassProvider>{children}</CartClassProvider>
+  <MemoryRouter>
+    <CartClassProvider>{children}</CartClassProvider>
+  </MemoryRouter>
 );
 
 /**

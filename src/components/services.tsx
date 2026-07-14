@@ -1,56 +1,34 @@
 import type { ServiceItem } from "../types";
+import { CardGrid } from "./common/CardGrid";
 
 interface Props {
   data?: ServiceItem[];
 }
 
-function createRow(children: ServiceItem[]) {
-  const rowCount: number = 3;
-  const rows = [];
-  let idx = 0;
-  while (idx < children.length - 1) {
-    const start = idx;
-    const end = idx + rowCount;
-    const slice = children.slice(start, end);
-
-    const rowContent = slice.map((d, i) => (
-      <div key={`${d.name}-${i}`} className="col-md-4">
-        <i className={d.icon}></i>
-        <div className="service-desc">
-          <h3>{d.name}</h3>
-          <p>{d.text}</p>
-        </div>
+export const Services = ({ data }: Props) => (
+  <div id="services">
+    <div className="ai-services-container">
+      <div className="section-title">
+        <span className="ai-section-label">What We Do</span>
+        <h2>Our Services</h2>
+        <p className="ai-section-desc">
+          Six disciplines, one partner. We cover every layer of your technology stack so you never
+          have to juggle multiple vendors.
+        </p>
       </div>
-    ));
-
-    const row = (
-      <div key={`row-[${start}-${end}]`} className="row">
-        {rowContent}
-      </div>
-    )
-    rows.push(row);
-
-    idx += rowCount;
-  }
-  return rows
-}
-
-export const Services = ({ data }: Props) => {
-  return (
-    <div id="services" className="text-center">
-      <div className="container">
-        <div className="section-title">
-          <h2>Our Services</h2>
-          <p>
-            Six disciplines, one partner. We cover every layer of your technology stack so you never have to juggle multiple vendors.
-          </p>
-        </div>
-        <div className="row">
-          {data
-            ? createRow(data)
-            : "loading"}
-        </div>
-      </div>
+      <CardGrid minCardWidth="300px" gap="26px">
+        {data
+          ? data.map((d, i) => (
+              <div key={`${d.name}-${i}`} className="ai-service-card">
+                <div className="ai-service-icon-box" aria-hidden="true">
+                  <i className={d.icon} />
+                </div>
+                <h3>{d.name}</h3>
+                <p>{d.text}</p>
+              </div>
+            ))
+          : null}
+      </CardGrid>
     </div>
-  );
-};
+  </div>
+);

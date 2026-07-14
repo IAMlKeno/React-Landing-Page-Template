@@ -1,50 +1,98 @@
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import JsonData from "../../data/data.json";
 import { NavigationData, NavigationItemsData } from "../../types";
 
 export const Navigation = () => {
   const data: NavigationData = JsonData.Navigation;
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 860);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 859.98px)");
+    const handler = (e: MediaQueryListEvent) => {
+      setIsMobile(e.matches);
+      if (!e.matches) setMenuOpen(false);
+    };
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  const closeMenu = () => setMenuOpen(false);
+  const isRoute = (href: string) => href.startsWith("/");
+  const isActive = (href: string) => isRoute(href) && location.pathname === href;
+  const contactHref = location.pathname === "/" ? "#contact" : "/#contact";
 
   return (
-    <nav id="menu" className="navbar navbar-default navbar-fixed-top">
-      <div className="container">
-        <div className="navbar-header">
-          <button
-            type="button"
-            className="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#bs-example-navbar-collapse-1"
-          >
-            {" "}
-            <span className="sr-only">Toggle navigation</span>{" "}
-            <span className="icon-bar"></span>{" "}
-            <span className="icon-bar"></span>{" "}
-            <span className="icon-bar"></span>{" "}
-          </button>
-          <a className="navbar-brand page-scroll" href="#page-top">
-            { data.logo.type == 'text'
-                ? data.logo.value
-                : "Not applicable"
-            }
-          </a>{" "}
-        </div>
+    <header id="ai-header" aria-label="Site header">
+      <nav className="ai-nav" aria-label="Primary">
+        <Link to="/" className="ai-logo" onClick={closeMenu}>
+          <span className="ai-logo-badge" aria-hidden="true">
+            <img src="/img/avanti/avanti_logo_square_nobg.png" width={30}/>
+          </span>
+          <span className="ai-logo-text">{data.logo.value}</span>
+        </Link>
 
-        <div
-          className="collapse navbar-collapse"
-          id="bs-example-navbar-collapse-1"
-        >
-          <ul className="nav navbar-nav navbar-right">
-            {data &&
-              data.items.map((item: NavigationItemsData) => (
-                <li key={item.href}>
-                  <a href={item.href} className={item.className.join(' ')} >
-                    {item.label}
-                  </a>
-                </li>
-              ))
-            }
-          </ul>
+        {!isMobile && (
+          <div className="ai-nav-desktop">
+            {data.items.map((item: NavigationItemsData) =>
+              isRoute(item.href) ? (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className={`ai-nav-link${isActive(item.href) ? " is-active" : ""}`}
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a key={item.href} href={item.href} className="ai-nav-link">
+                  {item.label}
+                </a>
+              )
+            )}
+            <a href={contactHref} className="ai-nav-cta">Get a Free Consult</a>
+          </div>
+        )}
+
+        {isMobile && (
+          <button
+            className="ai-hamburger"
+            aria-label="Toggle navigation menu"
+            aria-expanded={menuOpen}
+            aria-controls="ai-mobile-menu"
+            onClick={() => setMenuOpen(o => !o)}
+          >
+            <i className={menuOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars"} aria-hidden="true" />
+          </button>
+        )}
+      </nav>
+
+      {isMobile && menuOpen && (
+        <div id="ai-mobile-menu" className="ai-mobile-panel">
+          {data.items.map((item: NavigationItemsData) =>
+            isRoute(item.href) ? (
+              <Link
+                key={item.href}
+                to={item.href}
+                className={isActive(item.href) ? "is-active" : undefined}
+                aria-current={isActive(item.href) ? "page" : undefined}
+                onClick={closeMenu}
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <a key={item.href} href={item.href} onClick={closeMenu}>
+                {item.label}
+              </a>
+            )
+          )}
+          <a href={contactHref} className="ai-mobile-cta" onClick={closeMenu}>
+            Get a Free Consult
+          </a>
         </div>
-      </div>
-    </nav>
+      )}
+    </header>
   );
 };
