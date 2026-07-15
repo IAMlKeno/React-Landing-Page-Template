@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import type { CaseStudy } from "../../types";
 import { CardGrid } from "../common/CardGrid";
 import { CaseStudyCard } from "./CaseStudyCard";
@@ -6,13 +9,12 @@ const PER_PAGE = 6;
 
 interface Props {
   studies: CaseStudy[];
-  page: number;
-  onPageChange: (page: number) => void;
-  selectedId: string | null;
-  onSelect: (study: CaseStudy) => void;
+  selectedSlug?: string;
 }
 
-export const CaseStudiesList = ({ studies, page, onPageChange, selectedId, onSelect }: Props) => {
+export const CaseStudiesListClient = ({ studies, selectedSlug }: Props) => {
+  const [page, setPage] = useState(0);
+
   const totalCount = studies.length;
   const pageCount = Math.max(1, Math.ceil(totalCount / PER_PAGE));
   const currentPage = Math.min(page, pageCount - 1);
@@ -21,6 +23,11 @@ export const CaseStudiesList = ({ studies, page, onPageChange, selectedId, onSel
   const isFirstPage = currentPage === 0;
   const isLastPage = currentPage === pageCount - 1;
   const rangeLabel = `${start + 1}–${Math.min(start + PER_PAGE, totalCount)}`;
+
+  const changePage = (nextPage: number) => {
+    setPage(nextPage);
+    document.getElementById("cs-list-section")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <section id="cs-list-section" className="ai-cs-list" aria-labelledby="cs-list-h">
@@ -34,12 +41,7 @@ export const CaseStudiesList = ({ studies, page, onPageChange, selectedId, onSel
 
         <CardGrid minCardWidth="280px" gap="24px" className="ai-cs-card-grid">
           {pageItems.map((study) => (
-            <CaseStudyCard
-              key={study.id}
-              study={study}
-              isActive={study.id === selectedId}
-              onSelect={() => onSelect(study)}
-            />
+            <CaseStudyCard key={study.id} study={study} isActive={study.slug === selectedSlug} />
           ))}
         </CardGrid>
 
@@ -50,7 +52,7 @@ export const CaseStudiesList = ({ studies, page, onPageChange, selectedId, onSel
               className="ai-cs-page-btn"
               aria-label="Previous page"
               disabled={isFirstPage}
-              onClick={() => onPageChange(currentPage - 1)}
+              onClick={() => changePage(currentPage - 1)}
             >
               <i className="fa-solid fa-chevron-left" aria-hidden="true" />
             </button>
@@ -61,7 +63,7 @@ export const CaseStudiesList = ({ studies, page, onPageChange, selectedId, onSel
                 className={`ai-cs-page-btn${i === currentPage ? " is-active" : ""}`}
                 aria-label={`Page ${i + 1}`}
                 aria-current={i === currentPage ? "page" : undefined}
-                onClick={() => onPageChange(i)}
+                onClick={() => changePage(i)}
               >
                 {i + 1}
               </button>
@@ -71,7 +73,7 @@ export const CaseStudiesList = ({ studies, page, onPageChange, selectedId, onSel
               className="ai-cs-page-btn"
               aria-label="Next page"
               disabled={isLastPage}
-              onClick={() => onPageChange(currentPage + 1)}
+              onClick={() => changePage(currentPage + 1)}
             >
               <i className="fa-solid fa-chevron-right" aria-hidden="true" />
             </button>

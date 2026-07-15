@@ -1,17 +1,14 @@
 import React from 'react';
 import { render, type RenderOptions } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
 import { CartClassProvider } from '../features/cart/context/CartClassProvider';
 
 const AllProviders = ({ children }: { children: React.ReactNode }) => (
-  <MemoryRouter>
-    <CartClassProvider>{children}</CartClassProvider>
-  </MemoryRouter>
+  <CartClassProvider>{children}</CartClassProvider>
 );
 
 /**
  * Use instead of @testing-library/react `render` for components that
- * depend on CartClassContext (CartIcon, CartModal, ProductList, Navigation).
+ * depend on CartClassContext (CartIcon, CartModal, ProductList).
  */
 const renderWithProviders = (
   ui: React.ReactElement,

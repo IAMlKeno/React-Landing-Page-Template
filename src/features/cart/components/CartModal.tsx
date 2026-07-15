@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef, useEffect } from "react";
 import { CartItem, ICart } from "../domain/Cart";
 
