@@ -1,23 +1,29 @@
-import { screen } from '@testing-library/react';
-import { render } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import { renderWithProviders } from '../../test/utils';
+import { render, screen } from '@testing-library/react';
 import { Navigation } from './navigation';
 
+const mockUsePathname = vi.fn(() => '/');
+vi.mock('next/navigation', () => ({
+  usePathname: () => mockUsePathname(),
+}));
+
 describe('Navigation', () => {
+  beforeEach(() => {
+    mockUsePathname.mockReturnValue('/');
+  });
+
   it('renders the nav element', () => {
-    renderWithProviders(<Navigation />);
+    render(<Navigation />);
     expect(screen.getByRole('navigation')).toBeInTheDocument();
   });
 
   it('renders the brand logo text', () => {
-    renderWithProviders(<Navigation />);
+    render(<Navigation />);
     // Brand text comes from data.json Navigation.logo.value
     expect(screen.getByText('Avanti Insieme')).toBeInTheDocument();
   });
 
   it('renders all navigation links from data, including Case Studies', () => {
-    renderWithProviders(<Navigation />);
+    render(<Navigation />);
     expect(screen.getByRole('link', { name: /services/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /about/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /case studies/i })).toBeInTheDocument();
@@ -25,7 +31,7 @@ describe('Navigation', () => {
   });
 
   it('links "Case Studies" to the /case-studies route', () => {
-    renderWithProviders(<Navigation />);
+    render(<Navigation />);
     expect(screen.getByRole('link', { name: /case studies/i })).toHaveAttribute(
       'href',
       '/case-studies'
@@ -33,11 +39,8 @@ describe('Navigation', () => {
   });
 
   it('marks "Case Studies" as the active nav item when on /case-studies', () => {
-    render(
-      <MemoryRouter initialEntries={['/case-studies']}>
-        <Navigation />
-      </MemoryRouter>
-    );
+    mockUsePathname.mockReturnValue('/case-studies');
+    render(<Navigation />);
     expect(screen.getByRole('link', { name: /case studies/i })).toHaveAttribute(
       'aria-current',
       'page'

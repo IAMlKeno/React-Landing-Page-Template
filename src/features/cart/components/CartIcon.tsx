@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import CartModal from "./CartModal";
 import { useClassCart } from "../context/CartClassProvider";

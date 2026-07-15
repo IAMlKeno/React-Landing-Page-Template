@@ -1,3 +1,4 @@
+"use client";
 
 import React, { createContext, useContext, useReducer } from "react";
 import { Cart } from "../domain/Cart";
@@ -37,14 +38,17 @@ const cartReducer = (state: Cart, action: ICartActions) => {
   updateLocalStorage(returnValue);
   return returnValue
 }
-const updateLocalStorage = (data: any) => localStorage.setItem('shopping_cart', JSON.stringify(data));
+const updateLocalStorage = (data: any) => {
+  if (typeof window === "undefined") return;
+  localStorage.setItem('shopping_cart', JSON.stringify(data));
+};
 
 export const CartClassProvider = ({children}: {children: React.ReactNode}) => {
-  const initialValue = localStorage.getItem("shopping_cart")
-    ? new Cart(JSON.parse(localStorage.getItem("shopping_cart")))
-    : new Cart();
-
-  const [state, dispatch] = useReducer(cartReducer, initialValue);
+  const [state, dispatch] = useReducer(cartReducer, undefined, () => {
+    if (typeof window === "undefined") return new Cart();
+    const persisted = localStorage.getItem("shopping_cart");
+    return persisted ? new Cart(JSON.parse(persisted)) : new Cart();
+  });
 
   return (
     <CartClassContext.Provider value={{ cart: state, dispatch }}>

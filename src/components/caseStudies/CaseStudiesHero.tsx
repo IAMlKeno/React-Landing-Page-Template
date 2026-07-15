@@ -1,11 +1,11 @@
+import Link from "next/link";
 import type { CaseStudy } from "../../types";
 
 interface Props {
   selected: CaseStudy | null;
-  onBack: () => void;
 }
 
-export const CaseStudiesHero = ({ selected, onBack }: Props) => (
+export const CaseStudiesHero = ({ selected }: Props) => (
   <section className="ai-cs-hero" aria-labelledby="cs-hero-h">
     <div className="ai-cs-hero-content">
       <span className="ai-hero-badge">
@@ -18,9 +18,9 @@ export const CaseStudiesHero = ({ selected, onBack }: Props) => (
           : "Real projects, real outcomes. A look at how we've helped businesses bridge digital, hardware, and human expertise."}
       </p>
       {selected && (
-        <button type="button" className="ai-cs-back-btn" onClick={onBack}>
+        <Link href="/case-studies" className="ai-cs-back-btn">
           <i className="fa-solid fa-arrow-left" aria-hidden="true" /> Back to All Case Studies
-        </button>
+        </Link>
       )}
     </div>
   </section>

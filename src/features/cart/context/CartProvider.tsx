@@ -1,3 +1,5 @@
+"use client";
+
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { Product } from "../domain/Product";
 
@@ -10,11 +12,15 @@ export const CartContext = createContext<CartContextType | undefined>(undefined)
 
 export const MyCartProvider = ({children}: {children: React.ReactNode}) => {
   const [products, setProducts] = useState<Product[]>(() => {
+    if (typeof window === "undefined") return [];
     const persistedCart = localStorage.getItem("shopping_cart");
     return persistedCart ? JSON.parse(persistedCart) : [];
   });
 
-  useEffect(() => localStorage.setItem('shopping_cart', JSON.stringify(products)), [products]);
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    localStorage.setItem('shopping_cart', JSON.stringify(products))
+  }, [products]);
 
   return (
     <CartContext.Provider value={{ products, setProducts }}>

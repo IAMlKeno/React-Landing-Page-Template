@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { getAllProducts, Product } from "../domain/Product";
 import { useClassCart } from "../context/CartClassProvider";

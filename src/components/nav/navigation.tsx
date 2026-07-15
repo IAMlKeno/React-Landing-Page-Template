@@ -1,16 +1,24 @@
+"use client";
+
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import JsonData from "../../data/data.json";
 import { NavigationData, NavigationItemsData } from "../../types";
 
 export const Navigation = () => {
   const data: NavigationData = JsonData.Navigation;
-  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 860);
+  // Always initialize to false (matching what the server renders, since
+  // window doesn't exist there) and correct it client-side in an effect —
+  // reading window.innerWidth during the initial render would mismatch the
+  // server-rendered HTML for any mobile visitor and break hydration.
+  const [isMobile, setIsMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 859.98px)");
+    setIsMobile(mq.matches);
     const handler = (e: MediaQueryListEvent) => {
       setIsMobile(e.matches);
       if (!e.matches) setMenuOpen(false);
@@ -21,13 +29,13 @@ export const Navigation = () => {
 
   const closeMenu = () => setMenuOpen(false);
   const isRoute = (href: string) => href.startsWith("/");
-  const isActive = (href: string) => isRoute(href) && location.pathname === href;
-  const contactHref = location.pathname === "/" ? "#contact" : "/#contact";
+  const isActive = (href: string) => isRoute(href) && pathname === href;
+  const contactHref = pathname === "/" ? "#contact" : "/#contact";
 
   return (
     <header id="ai-header" aria-label="Site header">
       <nav className="ai-nav" aria-label="Primary">
-        <Link to="/" className="ai-logo" onClick={closeMenu}>
+        <Link href="/" className="ai-logo" onClick={closeMenu}>
           <span className="ai-logo-badge" aria-hidden="true">
             <img src="/img/avanti/avanti_logo_square_nobg.png" width={30}/>
           </span>
@@ -40,7 +48,7 @@ export const Navigation = () => {
               isRoute(item.href) ? (
                 <Link
                   key={item.href}
-                  to={item.href}
+                  href={item.href}
                   className={`ai-nav-link${isActive(item.href) ? " is-active" : ""}`}
                   aria-current={isActive(item.href) ? "page" : undefined}
                 >
@@ -75,7 +83,7 @@ export const Navigation = () => {
             isRoute(item.href) ? (
               <Link
                 key={item.href}
-                to={item.href}
+                href={item.href}
                 className={isActive(item.href) ? "is-active" : undefined}
                 aria-current={isActive(item.href) ? "page" : undefined}
                 onClick={closeMenu}
