@@ -24,3 +24,16 @@ yarn-debug.log*
 yarn-error.log*
 .projectignore/
 .env
+
+
+# Firebase temporary cache files
+.firebase/
+
+# Firebase Admin SDK Private Keys (Server-side)
+*-private-key.json
+service-account-file.json
+
+
+# Optional: Add these if your repository is fully public to avoid others cloning your exact app instance
+# google-services.json
+# GoogleService-Info.plist
