@@ -269,25 +269,5 @@
         }
       ]
     }
-  },
-  "Products": [
-    {
-      "id": "1",
-      "sku": "SWC-DEPOSIT",
-      "name": "Coaching Program Deposit",
-      "description": "Placeholder product exercising the future checkout flow — replace with a real bookable/purchasable offer.",
-      "icon": "fa-solid fa-dumbbell",
-      "price": 50,
-      "action": "cart"
-    },
-    {
-      "id": "2",
-      "sku": "SWC-SAMPLE-PLAN",
-      "name": "Sample Program PDF",
-      "description": "Placeholder digital product exercising the future checkout flow — replace with a real downloadable offer.",
-      "icon": "fa-solid fa-file-lines",
-      "price": 0,
-      "action": "coming_soon"
-    }
-  ]
+  }
 }

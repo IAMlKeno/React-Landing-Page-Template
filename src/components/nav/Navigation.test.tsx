@@ -25,6 +25,6 @@ describe('Navigation', () => {
 
   it('renders the free consultation CTA', () => {
     render(<Navigation />);
-    expect(screen.getByRole('link', { name: /get a free consult/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /start your strength journey/i })).toBeInTheDocument();
   });
 });

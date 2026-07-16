@@ -1,10 +1,14 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import JsonData from "../../data/data.json";
 import { NavigationData, NavigationItemsData } from "../../types";
 
 export const Navigation = () => {
   const data: NavigationData = JsonData.Navigation;
-  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 860);
+  // Initialize to desktop (matches server-rendered output, which has no window);
+  // corrected client-side in the effect below after hydration.
+  const [isMobile, setIsMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -13,6 +17,7 @@ export const Navigation = () => {
       setIsMobile(e.matches);
       if (!e.matches) setMenuOpen(false);
     };
+    setIsMobile(mq.matches);
     mq.addEventListener("change", handler);
     return () => mq.removeEventListener("change", handler);
   }, []);

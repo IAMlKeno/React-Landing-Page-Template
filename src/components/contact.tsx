@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import type { ContactData, SocialLinks } from "../types";
@@ -15,9 +17,9 @@ interface FormState {
 
 const initialState: FormState = { name: "", email: "", message: "" };
 const emailjsConfig = {
-  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-  publicKey: import.meta.env.VITE_EMAILJS_PUB_KEY,
+  templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+  serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+  publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUB_KEY!,
 };
 
 export const Contact = ({ data }: Props) => {

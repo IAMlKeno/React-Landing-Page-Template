@@ -92,25 +92,6 @@ export interface SocialLinks {
   icon: string;
 }
 
-export interface ProductImage {
-  src: string;
-  alt: string;
-  height?: number;
-  width?: number;
-}
-
-export interface ProductData {
-  id: string;
-  sku: string;
-  name: string;
-  description: string;
-  icon?: string;
-  price: number;
-  image?: ProductImage;
-  action: string;
-  feedbackLink?: string;
-}
-
 export interface LandingPageData {
   SEO?: any;
   Navigation: NavigationData;
@@ -124,5 +105,4 @@ export interface LandingPageData {
   FAQ: FaqItem[];
   FinalCTA: FinalCtaData;
   Contact: ContactData;
-  Products: ProductData[];
 }
