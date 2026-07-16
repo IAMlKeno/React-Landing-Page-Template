@@ -30,7 +30,10 @@ export const Navigation = () => {
   const closeMenu = () => setMenuOpen(false);
   const isRoute = (href: string) => href.startsWith("/");
   const isActive = (href: string) => isRoute(href) && pathname === href;
-  const contactHref = pathname === "/" ? "#contact" : "/#contact";
+  // #services/#about/#contact only exist on "/" — from any other route they
+  // need to be prefixed so the browser navigates there first.
+  const anchorHref = (href: string) => (pathname === "/" ? href : `/${href}`);
+  const contactHref = anchorHref("#contact");
 
   return (
     <header id="ai-header" aria-label="Site header">
@@ -55,7 +58,7 @@ export const Navigation = () => {
                   {item.label}
                 </Link>
               ) : (
-                <a key={item.href} href={item.href} className="ai-nav-link">
+                <a key={item.href} href={anchorHref(item.href)} className="ai-nav-link">
                   {item.label}
                 </a>
               )
@@ -91,7 +94,7 @@ export const Navigation = () => {
                 {item.label}
               </Link>
             ) : (
-              <a key={item.href} href={item.href} onClick={closeMenu}>
+              <a key={item.href} href={anchorHref(item.href)} onClick={closeMenu}>
                 {item.label}
               </a>
             )

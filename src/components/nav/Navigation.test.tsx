@@ -46,4 +46,24 @@ describe('Navigation', () => {
       'page'
     );
   });
+
+  it('points anchor links (Services/About/Contact) at "/#..." when not on the homepage', () => {
+    mockUsePathname.mockReturnValue('/case-studies');
+    render(<Navigation />);
+    expect(screen.getByRole('link', { name: /services/i })).toHaveAttribute('href', '/#services');
+    expect(screen.getByRole('link', { name: /about/i })).toHaveAttribute('href', '/#about');
+    expect(screen.getByRole('link', { name: /^contact$/i })).toHaveAttribute('href', '/#contact');
+    expect(screen.getByRole('link', { name: /get a free consult/i })).toHaveAttribute(
+      'href',
+      '/#contact'
+    );
+  });
+
+  it('leaves anchor links as plain "#..." hashes when already on the homepage', () => {
+    mockUsePathname.mockReturnValue('/');
+    render(<Navigation />);
+    expect(screen.getByRole('link', { name: /services/i })).toHaveAttribute('href', '#services');
+    expect(screen.getByRole('link', { name: /about/i })).toHaveAttribute('href', '#about');
+    expect(screen.getByRole('link', { name: /^contact$/i })).toHaveAttribute('href', '#contact');
+  });
 });
