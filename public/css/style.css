@@ -1232,3 +1232,293 @@ a:focus-visible {
   display: flex;
   align-items: center;
 }
+
+/* ============================================================
+   Case Studies — Hero
+   ============================================================ */
+.ai-cs-hero {
+  background: var(--gradient-brand);
+  padding: 100px 24px 60px;
+  text-align: center;
+}
+.ai-cs-hero-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.ai-cs-hero-content .ai-section-label {
+  color: var(--color-teal-light);
+}
+.ai-cs-hero-content h1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: clamp(30px, 4.5vw, 48px);
+  letter-spacing: -1px;
+  line-height: 1.1;
+  color: var(--color-white);
+  margin: 6px 0 16px;
+  text-transform: none;
+}
+.ai-cs-hero-content p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #e2ebef;
+  max-width: 560px;
+  margin: 0 auto;
+}
+.ai-cs-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-teal-light);
+  text-decoration: none;
+  margin-bottom: 22px;
+}
+.ai-cs-back-btn:hover,
+.ai-cs-back-btn:focus {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+/* ============================================================
+   Case Studies — List
+   ============================================================ */
+.ai-cs-list {
+  background: var(--color-light);
+  padding: 84px 24px;
+  scroll-margin-top: 74px;
+}
+.ai-cs-list-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.ai-cs-list-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.ai-cs-list-header h2 {
+  margin: 0;
+  font-size: clamp(26px, 3.2vw, 34px);
+}
+.ai-cs-range-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+.ai-cs-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border: 1px solid #e4ebee;
+  border-radius: 16px;
+  padding: 28px 26px;
+  box-shadow: 0 1px 3px rgba(17, 37, 65, 0.06);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
+}
+.ai-cs-card:hover,
+.ai-cs-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(17, 37, 65, 0.12);
+  border-color: #cfe0dd;
+  text-decoration: none;
+}
+.ai-cs-card.is-active {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(38, 115, 109, 0.25);
+}
+.ai-cs-card-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background: #e3efed;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.ai-cs-card-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.3;
+  color: var(--color-primary);
+  margin: 0 0 10px;
+}
+.ai-cs-card-preview {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 0 0 18px;
+  flex: 1;
+}
+.ai-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.ai-cs-card-cta {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ============================================================
+   Case Studies — Pagination
+   ============================================================ */
+.ai-cs-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 48px;
+}
+.ai-cs-page-btn {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d9e2e6;
+  border-radius: 10px;
+  background: var(--color-white);
+  color: var(--color-primary);
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.ai-cs-page-btn:hover:not(:disabled) {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+.ai-cs-page-btn.is-active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+}
+.ai-cs-page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   Case Studies — Detail
+   ============================================================ */
+.ai-cs-detail {
+  background: var(--color-white);
+  padding: 96px 24px;
+  scroll-margin-top: 74px;
+  animation: ai-cs-fade-in 0.4s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ai-cs-detail {
+    animation: none;
+  }
+}
+@keyframes ai-cs-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.ai-cs-detail-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.ai-cs-detail-content h2 {
+  font-size: clamp(26px, 3.4vw, 38px);
+  letter-spacing: -0.6px;
+  text-transform: none;
+}
+.ai-cs-detail-client {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: -8px 0 28px;
+}
+.ai-cs-detail-body p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+  margin: 0 0 20px;
+}
+.ai-cs-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 18px;
+  background: var(--color-light);
+  border-radius: 16px;
+  padding: 28px 26px;
+  margin: 32px 0 36px;
+}
+.ai-cs-result {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ai-cs-result-stat {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  color: var(--color-primary);
+}
+.ai-cs-result-label {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+.ai-cs-detail-cta {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(38, 115, 109, 0.35);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.ai-cs-detail-cta:hover,
+.ai-cs-detail-cta:focus {
+  background: var(--color-accent-hover);
+  transform: translateY(-2px);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .ai-cs-hero {
+    padding: 84px 20px 48px;
+  }
+  .ai-cs-list,
+  .ai-cs-detail {
+    padding: 60px 18px;
+  }
+  .ai-cs-results {
+    padding: 22px 20px;
+  }
+}

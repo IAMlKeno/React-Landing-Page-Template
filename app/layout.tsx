@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
+import { Navigation } from "@/components/nav/navigation";
+import { Footer } from "@/components/Footer";
+import JsonData from "@/data/data.json";
+import type { LandingPageData } from "@/types";
 import "./globals.css";
+
+const landingPageData = JsonData as LandingPageData;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.squatwithconfidence.ca"),
@@ -92,10 +98,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-        <a href="#programs" className="skip-link">
+        <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
+        <Navigation />
         {children}
+        <Footer data={landingPageData.Contact} />
       </body>
     </html>
   );

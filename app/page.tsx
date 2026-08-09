@@ -1,4 +1,3 @@
-import { Navigation } from "@/components/nav/navigation";
 import { Header } from "@/components/header";
 import { Features } from "@/components/features";
 import { Programs } from "@/components/programs";
@@ -8,6 +7,7 @@ import { Testimonials } from "@/components/testimonials";
 import { FAQ } from "@/components/faq";
 import { FinalCTA } from "@/components/final-cta";
 import { Contact } from "@/components/contact";
+import { ScrollToHash } from "@/components/ScrollToHash";
 import JsonData from "@/data/data.json";
 import type { LandingPageData } from "@/types";
 
@@ -15,8 +15,8 @@ const landingPageData = JsonData as LandingPageData;
 
 export default function Home() {
   return (
-    <div>
-      <Navigation />
+    <div id="main-content">
+      <ScrollToHash />
       <Header data={landingPageData.Header} stats={landingPageData.Stats} />
       <Features data={landingPageData.Features} />
       <Programs data={landingPageData.Programs} />

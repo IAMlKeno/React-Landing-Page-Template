@@ -10,6 +10,7 @@
       { "href": "#process", "className": ["page-scroll"], "label": "Process" },
       { "href": "#about", "className": ["page-scroll"], "label": "About" },
       { "href": "#testimonials", "className": ["page-scroll"], "label": "Testimonials" },
+      { "href": "/case-studies", "className": ["menu-item"], "label": "Case Studies" },
       { "href": "#faq", "className": ["page-scroll"], "label": "FAQ" },
       { "href": "#contact", "className": ["page-scroll"], "label": "Contact" }
     ],
@@ -269,5 +270,98 @@
         }
       ]
     }
-  }
+  },
+  "CaseStudies": [
+    {
+      "id": "case-1",
+      "slug": "gym-shy-to-confident-squatter",
+      "tag": "Squat with Confidence",
+      "client": "Sample Client 1 (replace before publishing)",
+      "title": "From Gym-Shy to Squatting with Confidence",
+      "body": "Coming in, the client had never squatted with a barbell and felt intimidated using the squat rack in a busy gym. The four-week Squat with Confidence program started with a full movement assessment to identify mobility limits and build a technique baseline before adding any real load.\n\nEach session paired hands-on coaching with video form review, so the client could see exactly what changed rep to rep. Mobility work between sessions addressed a tight ankle range that had been quietly capping depth. By week three, bodyweight squats had given way to a loaded bar, and the client was working sets independently between coaching sessions.\n\nBy the end of the program, the client was squatting well below parallel with a stable bar path, tracking every session in a training log, and — most importantly — no longer avoiding the squat rack during peak gym hours.",
+      "results": [
+        { "stat": "4 weeks", "label": "Program length" },
+        { "stat": "+40 lbs", "label": "Squat PR increase" },
+        { "stat": "6", "label": "Coaching sessions completed" }
+      ]
+    },
+    {
+      "id": "case-2",
+      "slug": "six-week-strength-transformation-story",
+      "tag": "Six Week Strength Transformation",
+      "client": "Sample Client 2 (replace before publishing)",
+      "title": "A Six-Week Reset Built Around Real Habits",
+      "body": "This client signed up for the Six Week Strength Transformation after a long stretch of inconsistent training — plenty of gym experience, but no structure and no accountability. The program opened with a full assessment and baseline measurements, then two coached sessions a week for six weeks.\n\nNutrition guidance and habit coaching ran alongside the training program rather than as an afterthought: small, sustainable changes to meal timing and protein intake, tracked weekly alongside progress photos and body measurements. Weekly check-ins caught dips in motivation early and adjusted programming before they became missed sessions.\n\nThe client finished the program having missed zero scheduled sessions, with measurable strength gains across every major lift and — by their own account — a training routine they actually looked forward to, not one they had to force themselves into.",
+      "results": [
+        { "stat": "6 weeks", "label": "Program length" },
+        { "stat": "12", "label": "Coached sessions" },
+        { "stat": "0", "label": "Missed sessions" }
+      ]
+    },
+    {
+      "id": "case-3",
+      "slug": "first-powerlifting-meet-prep",
+      "tag": "Beginner Powerlifting",
+      "client": "Sample Client 3 (replace before publishing)",
+      "title": "Preparing for a First Powerlifting Meet",
+      "body": "This client wanted to compete in a local powerlifting meet but had never trained the squat, bench and deadlift to competition standards. The Beginner Powerlifting program began with a complete movement assessment across all three lifts, followed by eight coaching sessions built around competition-specific technique.\n\nProgramming balanced technical practice with progressive overload, and included dedicated progress testing sessions to simulate meet-day attempts before the real thing. Nutrition guidance supported recovery through the higher training volume in the final two weeks.\n\nThe client walked into their first meet with three confidently rehearsed lifts, a clear attempt selection strategy, and went 9-for-9 on their attempts — a result they credited directly to how much competition-specific practice the program built in ahead of time.",
+      "results": [
+        { "stat": "6 weeks", "label": "Program length" },
+        { "stat": "8", "label": "Coaching sessions" },
+        { "stat": "9/9", "label": "Successful meet-day attempts" }
+      ]
+    },
+    {
+      "id": "case-4",
+      "slug": "bench-press-plateau-broken",
+      "tag": "Bench with Confidence",
+      "client": "Sample Client 4 (replace before publishing)",
+      "title": "Breaking a Long-Standing Bench Plateau",
+      "body": "The client had been stuck at the same bench press number for over a year despite consistent training. A shoulder assessment during the first Bench with Confidence session revealed a limited setup — an unstable bar path traced back to shoulder positioning rather than raw strength.\n\nCoaching focused on rebuilding the setup from the ground up: bar path, leg drive and accessory work targeting the specific weak points the assessment surfaced. Spotting fundamentals were covered early so the client could keep training safely at higher intensities between sessions.\n\nWith the technical fix in place, the plateau broke within the first two weeks, and the client kept adding weight through the rest of the program on a lift that had felt stuck for over a year.",
+      "results": [
+        { "stat": "4 weeks", "label": "Program length" },
+        { "stat": "1 session", "label": "Time to break the plateau" },
+        { "stat": "6", "label": "Coaching sessions completed" }
+      ]
+    },
+    {
+      "id": "case-5",
+      "slug": "busy-professional-consistency",
+      "tag": "Strength for Busy Professionals",
+      "client": "Sample Client 5 (replace before publishing)",
+      "title": "Building Consistency Around a Packed Schedule",
+      "body": "A busy professional with an unpredictable schedule wanted to get stronger without training becoming another source of stress. The Strength for Busy Professionals program built a three-day training plan around 30-45 minute sessions that could flex with a changing calendar.\n\nLifestyle and habit coaching ran in parallel with the training plan, focused on realistic recovery planning rather than an idealized routine the client wouldn't actually stick to. Monthly progress reviews kept the plan honest and adjusted the schedule as work demands shifted.\n\nMonths in, the client has kept training three days a week through several stretches that would previously have derailed any gym routine entirely — the plan bent around the schedule instead of competing with it.",
+      "results": [
+        { "stat": "30-45 min", "label": "Typical session length" },
+        { "stat": "3x/week", "label": "Training frequency maintained" },
+        { "stat": "Ongoing", "label": "Coaching relationship" }
+      ]
+    },
+    {
+      "id": "case-6",
+      "slug": "second-squat-confidence-rebuild",
+      "tag": "Squat with Confidence",
+      "client": "Sample Client 6 (replace before publishing)",
+      "title": "Rebuilding Squat Confidence After a Long Break",
+      "body": "This client had squatted years earlier but stepped away from training and lost confidence under the bar entirely. Rather than jumping back to old numbers, the Squat with Confidence program started from a fresh assessment and rebuilt technique from an empty bar up.\n\nWeekly accountability check-ins and video form analysis meant every session built directly on the last, and mobility recommendations addressed stiffness that had developed during the time away from training.\n\nBy the end of the program, the client wasn't just back to their old working weight — they were squatting it with noticeably better technique and far more confidence than before the break.",
+      "results": [
+        { "stat": "4 weeks", "label": "Program length" },
+        { "stat": "+25 lbs", "label": "Squat working weight increase" },
+        { "stat": "6", "label": "Coaching sessions completed" }
+      ]
+    },
+    {
+      "id": "case-7",
+      "slug": "second-transformation-habit-rebuild",
+      "tag": "Six Week Strength Transformation",
+      "client": "Sample Client 7 (replace before publishing)",
+      "title": "A Second Transformation, Built to Last This Time",
+      "body": "This client had completed a transformation program elsewhere before, but the results didn't stick once the program ended. The Six Week Strength Transformation approached things differently: habit coaching was treated as the core deliverable, not a bonus alongside the training plan.\n\nWeekly check-ins tracked more than lift numbers — body measurements and progress photos gave an honest picture of change week to week, and nutrition guidance focused on habits the client could realistically keep past the six-week mark.\n\nAt graduation review, the client's biggest win wasn't a single number on the bar — it was a set of habits from meal prep to session scheduling that were still intact months later.",
+      "results": [
+        { "stat": "6 weeks", "label": "Program length" },
+        { "stat": "12", "label": "Coached sessions" },
+        { "stat": "100%", "label": "Session attendance" }
+      ]
+    }
+  ]
 }

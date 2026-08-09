@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { Suspense, useCallback, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import type { ContactData, SocialLinks } from "../types";
-import JsonData from "../data/data.json";
+import type { CaseStudy, ContactData } from "../types";
+import { ContactProjectPrefill } from "./ContactProjectPrefill";
 
 interface Props {
   data?: ContactData;
@@ -26,6 +26,17 @@ export const Contact = ({ data }: Props) => {
   const contactForm = useRef(null);
   const [{ name, email, message }, setState] = useState<FormState>(initialState);
   const [statusMsg, setStatusMsg] = useState("");
+
+  // Pre-fills the message when arriving via a case study's "Start a Project
+  // Like This" link (/?project=<slug>#contact). Only fills an empty message
+  // so it never clobbers something the visitor already typed.
+  const handlePrefill = useCallback((study: CaseStudy) => {
+    setState((prev) =>
+      prev.message
+        ? prev
+        : { ...prev, message: `Hi, I'd like to start a project like "${study.title}" (${study.tag}). ` }
+    );
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -53,6 +64,9 @@ export const Contact = ({ data }: Props) => {
 
   return (
     <>
+      <Suspense fallback={null}>
+        <ContactProjectPrefill onPrefill={handlePrefill} />
+      </Suspense>
       <div id="contact">
         <div className="ai-contact-grid">
           <div className="ai-contact-form-col">
@@ -155,27 +169,6 @@ export const Contact = ({ data }: Props) => {
           </div>
         </div>
       </div>
-
-      <footer id="footer">
-        <div className="ai-footer-inner">
-          <p>&copy; {new Date().getFullYear()} {JsonData.Navigation.logo.value}. All rights reserved.</p>
-          {data?.social && (
-            <div className="ai-social-links">
-              {data.social.links.map((social: SocialLinks, idx: number) => (
-                <a
-                  key={social.link + "_" + idx}
-                  href={social.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.icon.replace("fa-", "")}
-                >
-                  <i className={`fa-brands ${social.icon}`} aria-hidden="true" />
-                </a>
-              ))}
-            </div>
-          )}
-        </div>
-      </footer>
     </>
   );
 };
